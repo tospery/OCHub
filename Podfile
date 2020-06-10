@@ -6,6 +6,8 @@ use_frameworks!
 target "OCHub" do
 	pod 'OCFrame', :path => '../OCFrame'
 	
+	pod 'FontAwesomeKit', '2.2.1'
+	
 	pod 'Masonry', '1.1.0'
 	pod 'IQKeyboardManager', '6.5.4'
 	pod 'pop', '1.0.12'

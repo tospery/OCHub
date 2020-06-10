@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793CC3D0248E3F9600E87685 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 793CC3CF248E3F9600E87685 /* Localizable.strings */; };
+		793CC3D3248E3FCD00E87685 /* R.m in Sources */ = {isa = PBXBuildFile; fileRef = 793CC3D1248E3FCD00E87685 /* R.m */; };
+		7995338B248E3D7B008A9D4C /* AppDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 7995338A248E3D7B008A9D4C /* AppDependency.m */; };
 		79A41BB4248E2D8F009FF527 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A41BB3248E2D8F009FF527 /* AppDelegate.m */; };
 		79A41BBF248E2D91009FF527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A41BBE248E2D91009FF527 /* Assets.xcassets */; };
 		79A41BC2248E2D91009FF527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A41BC0248E2D91009FF527 /* LaunchScreen.storyboard */; };
@@ -35,6 +38,12 @@
 
 /* Begin PBXFileReference section */
 		5E680E4D30A19F1DCAB0F287 /* Pods_OCHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		793CC3CF248E3F9600E87685 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		793CC3D1248E3FCD00E87685 /* R.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R.m; sourceTree = "<group>"; };
+		793CC3D2248E3FCD00E87685 /* R.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R.h; sourceTree = "<group>"; };
+		79953389248E3D7B008A9D4C /* AppDependency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDependency.h; sourceTree = "<group>"; };
+		7995338A248E3D7B008A9D4C /* AppDependency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDependency.m; sourceTree = "<group>"; };
+		7995338C248E3E0D008A9D4C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		79A41BAF248E2D8F009FF527 /* OCHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A41BB2248E2D8F009FF527 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		79A41BB3248E2D8F009FF527 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,12 +138,18 @@
 		79A41BE7248E2EA5009FF527 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				793CC3D2248E3FCD00E87685 /* R.h */,
+				793CC3D1248E3FCD00E87685 /* R.m */,
 				79A41BB2248E2D8F009FF527 /* AppDelegate.h */,
 				79A41BB3248E2D8F009FF527 /* AppDelegate.m */,
 				79A41BBE248E2D91009FF527 /* Assets.xcassets */,
 				79A41BC0248E2D91009FF527 /* LaunchScreen.storyboard */,
 				79A41BC3248E2D91009FF527 /* Info.plist */,
 				79A41BC4248E2D91009FF527 /* main.m */,
+				79953389248E3D7B008A9D4C /* AppDependency.h */,
+				7995338A248E3D7B008A9D4C /* AppDependency.m */,
+				7995338C248E3E0D008A9D4C /* PrefixHeader.pch */,
+				793CC3CF248E3F9600E87685 /* Localizable.strings */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -145,7 +160,6 @@
 				A85735012F2262F7586F8430 /* Pods-OCHub.debug.xcconfig */,
 				C19E929731BB66A081A013BE /* Pods-OCHub.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -168,6 +182,7 @@
 				79A41BAB248E2D8F009FF527 /* Sources */,
 				79A41BAC248E2D8F009FF527 /* Frameworks */,
 				79A41BAD248E2D8F009FF527 /* Resources */,
+				793CC3CE248E3F5000E87685 /* R.objc */,
 				8C4DE07782CC35E2CB87F627 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -263,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79A41BC2248E2D91009FF527 /* LaunchScreen.storyboard in Resources */,
+				793CC3D0248E3F9600E87685 /* Localizable.strings in Resources */,
 				79A41BBF248E2D91009FF527 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +322,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		793CC3CE248E3F5000E87685 /* R.objc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.objc;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/R.objc/Robjc\" -p \"$SRCROOT/OCHub\" --skip-themes\n";
+		};
 		8C4DE07782CC35E2CB87F627 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,7 +364,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793CC3D3248E3FCD00E87685 /* R.m in Sources */,
 				79A41BB4248E2D8F009FF527 /* AppDelegate.m in Sources */,
+				7995338B248E3D7B008A9D4C /* AppDependency.m in Sources */,
 				79A41BC5248E2D91009FF527 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +531,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KU77SE64RP;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OCHub/PrefixHeader.pch;
 				INFOPLIST_FILE = OCHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -514,6 +552,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KU77SE64RP;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OCHub/PrefixHeader.pch;
 				INFOPLIST_FILE = OCHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

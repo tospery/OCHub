@@ -1,0 +1,104 @@
+//
+//  PrefixHeader.pch
+//  OCHub
+//
+//  Created by 杨建祥 on 2020/6/8.
+//  Copyright © 2020 杨建祥. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
+
+#pragma mark - Pod管理的第三方库
+#import <OCFrame/OCFrame.h>
+//#import <AlibcTradeSDK/AlibcTradeSDK.h>
+//#import <AlibabaAuthSDK/ALBBSession.h>
+//#import <AlibabaAuthSDK/ALBBSDK.h>
+//#import <OHHTTPStubs/OHHTTPStubs.h>
+//#import <OHHTTPStubs/OHPathHelpers.h>
+//#import <BlocksKit/BlocksKit.h>
+//#import <BlocksKit/BlocksKit+UIKit.h>
+//#import <SDCycleScrollView/SDCycleScrollView.h>
+//#import <TTGTagCollectionView/TTGTextTagCollectionView.h>
+////#import <Masonry/Masonry.h>
+//#import <CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.h>
+////#import <TYAlertController/UIView+TYAlertView.h>
+////#import <TLYShyNavBar/TLYShyNavBar.h>
+////#import <JSBadgeView/JSBadgeView.h>
+
+#pragma mark - 手动管理的源码库
+//#import "SIAlertView.h"
+//#import "JPEngine.h"
+
+#pragma mark - 项目常用头文件
+#import "R.h"
+//#import "Constant.h"
+//#import "Function.h"
+//#import "Utils.h"
+//#import "User.h"
+//#import "UserInfo.h"
+//#import "UserAuth.h"
+//#import "Misc.h"
+//#import "Product.h"
+//#import "BaseResponse.h"
+//#import "BaseList.h"
+//#import "NSString+Addition.h"
+//#import "NSError+Addition.h"
+//#import "UIView+Addition.h"
+//#import "UIColor+Addition.h"
+//#import "BZMProvider+Addition.h"
+//#import "BZMProvider+Alibc.h"
+//#import "BZMProvider+Kujia.h"
+//#import "BZMProvider+Password.h"
+//#import "BZMParameter+Addition.h"
+//#import "NSString+Addition.h"
+//#import "NSURL+Addition.h"
+//#import "UIColor+Addition.h"
+//#import "UIImage+Addition.h"
+//#import "Const.h"
+//#import "Type.h"
+//#import "Function.h"
+//#import "Param.h"
+//#import "WebViewModel.h"
+//#import "WebViewController.h"
+//#import "NSString+Addition.h"
+//#import "UIColor+Addition.h"
+
+//#import "Misc.h"
+//#import "Utils.h"
+//#import "HTTPConfigure.h"
+//#import "KujiaHTTPClient.h"
+//#import "UIColor+Kujia.h"
+//#import "TBDialog+Kujia.h"
+//#import "Banner.h"
+//#import "BannerItem.h"
+//#import "BannerModule.h"
+//#import "BannerModuleItem.h"
+//#import "BannerModuleCell.h"
+//#import "Goods.h"
+//#import "GoodsList.h"
+//#import "GoodsRowItem.h"
+//#import "GoodsGridItem.h"
+//#import "LoginVM.h"
+//#import "ForwardConstant.h"
+//#import "TestVC.h"
+//#import "TestVM.h"
+
+#pragma mark - 全局变量
+
+#endif
+
+#endif /* PrefixHeader_pch */

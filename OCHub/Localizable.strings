@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  OCHub
+
+  Created by 杨建祥 on 2020/6/8.
+  Copyright © 2020 杨建祥. All rights reserved.
+*/
+
+/* 通用 */
+"Common.Yes" = "是";
+"Common.No" = "否";
+"Common.OK" = "确认";
+"Common.ISee" = "知道了";
+"Common.Cancel" = "取消";
