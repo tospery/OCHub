@@ -6,7 +6,6 @@
 //
 
 #import "OCFLibraryManager+Addition.h"
-#import <ATAuthSDK/ATAuthSDK.h>
 
 @implementation OCFLibraryManager (Addition)
 + (void)load {
@@ -18,17 +17,6 @@
 
 - (void)my_setup {
     [self my_setup];
-    [self setupATAuthSDK];
-}
-
-- (void)setupATAuthSDK {
-    [TXCommonHandler.sharedInstance setAuthSDKInfo:kAPPSecretATAuth complete:^(NSDictionary * _Nonnull resultDic) {
-        if ([OCFStrMember(resultDic, @"resultCode", nil) isEqualToString:PNSCodeSuccess]) {
-            OCFLogDebug(kOCFLogTagLibrary, @"阿里云号码认证初始化成功: %@", [TXCommonHandler.sharedInstance getVersion]);
-        } else {
-            OCFLogDebug(kOCFLogTagLibrary, @"阿里云号码认证初始化失败: %@", resultDic);
-        }
-    }];
 }
 
 

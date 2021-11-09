@@ -43,19 +43,15 @@
 @interface RImages ()
 @property (nonatomic, strong) UIImage* appSlogan;
 @property (nonatomic, strong) UIImage* appLogo;
-@property (nonatomic, strong) UIImage* icTabbarPluginSelected;
-@property (nonatomic, strong) UIImage* icTabbarMeSelected;
-@property (nonatomic, strong) UIImage* icTabbarPluginNormal;
-@property (nonatomic, strong) UIImage* icTabbarMeNormal;
+@property (nonatomic, strong) UIImage* icTabbarTrending;
+@property (nonatomic, strong) UIImage* icTabbarCenter;
 @end
 
 @implementation RImages
 - (UIImage*)appSlogan { return [UIImage imageNamed:@"AppSlogan" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)appLogo { return [UIImage imageNamed:@"AppLogo" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
-- (UIImage*)icTabbarPluginSelected { return [UIImage imageNamed:@"ic_tabbar_plugin_selected" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
-- (UIImage*)icTabbarMeSelected { return [UIImage imageNamed:@"ic_tabbar_me_selected" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
-- (UIImage*)icTabbarPluginNormal { return [UIImage imageNamed:@"ic_tabbar_plugin_normal" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
-- (UIImage*)icTabbarMeNormal { return [UIImage imageNamed:@"ic_tabbar_me_normal" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icTabbarTrending { return [UIImage imageNamed:@"ic_tabbar_trending" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icTabbarCenter { return [UIImage imageNamed:@"ic_tabbar_center" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 @end
 
 

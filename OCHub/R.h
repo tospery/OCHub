@@ -117,10 +117,8 @@ Undefined: "是"
 @interface RImages: NSObject
 - (UIImage*)appSlogan;
 - (UIImage*)appLogo;
-- (UIImage*)icTabbarPluginSelected;
-- (UIImage*)icTabbarMeSelected;
-- (UIImage*)icTabbarPluginNormal;
-- (UIImage*)icTabbarMeNormal;
+- (UIImage*)icTabbarTrending;
+- (UIImage*)icTabbarCenter;
 @end
 
 
