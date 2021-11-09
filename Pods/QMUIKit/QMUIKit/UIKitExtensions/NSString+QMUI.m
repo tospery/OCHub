@@ -1,6 +1,6 @@
 /**
  * Tencent is pleased to support the open source community by making QMUI_iOS available.
- * Copyright (C) 2016-2020 THL A29 Limited, a Tencent company. All rights reserved.
+ * Copyright (C) 2016-2021 THL A29 Limited, a Tencent company. All rights reserved.
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
  * http://opensource.org/licenses/MIT
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
@@ -15,9 +15,9 @@
 
 #import "NSString+QMUI.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "QMUICore.h"
 #import "NSArray+QMUI.h"
 #import "NSCharacterSet+QMUI.h"
-#import <objc/runtime.h>
 
 @implementation NSString (QMUI)
 
@@ -75,7 +75,7 @@
 }
 
 + (NSString *)hexLetterStringWithInteger:(NSInteger)integer {
-    NSAssert(integer < 16, @"要转换的数必须是16进制里的个位数，也即小于16，但你传给我是%@", @(integer));
+    QMUIAssert(integer < 16, @"NSString (QMUI)", @"%s 参数仅接受小于16的值，当前传入的是 %@", __func__, @(integer));
     
     NSString *letter = nil;
     switch (integer) {
@@ -208,9 +208,13 @@
 }
 
 - (NSString *)qmui_substringAvoidBreakingUpCharacterSequencesFromIndex:(NSUInteger)index lessValue:(BOOL)lessValue countingNonASCIICharacterAsTwo:(BOOL)countingNonASCIICharacterAsTwo {
-    index = countingNonASCIICharacterAsTwo ? [self transformIndexToDefaultModeWithIndex:index] : index;
+    NSUInteger length = countingNonASCIICharacterAsTwo ? self.qmui_lengthWhenCountingNonASCIICharacterAsTwo : self.length;
+    QMUIAssert(index < length, @"NSString (QMUI)", @"%s, index out of bounds.", __func__);
+    if (index >= length) return @"";
+    index = countingNonASCIICharacterAsTwo ? [self transformIndexToDefaultModeWithIndex:index] : index;// 实际计算都按照系统默认的 length 规则来
     NSRange range = [self rangeOfComposedCharacterSequenceAtIndex:index];
-    return [self substringFromIndex:lessValue ? NSMaxRange(range) : range.location];
+    BOOL matchedCharacterSequence = range.length > 1;
+    return [self substringFromIndex:matchedCharacterSequence && lessValue ? NSMaxRange(range) : range.location];
 }
 
 - (NSString *)qmui_substringAvoidBreakingUpCharacterSequencesFromIndex:(NSUInteger)index {
@@ -218,9 +222,13 @@
 }
 
 - (NSString *)qmui_substringAvoidBreakingUpCharacterSequencesToIndex:(NSUInteger)index lessValue:(BOOL)lessValue countingNonASCIICharacterAsTwo:(BOOL)countingNonASCIICharacterAsTwo {
-    index = countingNonASCIICharacterAsTwo ? [self transformIndexToDefaultModeWithIndex:index] : index;
-    NSRange range = [self rangeOfComposedCharacterSequenceAtIndex:index];
-    return [self substringToIndex:lessValue ? range.location : NSMaxRange(range)];
+    NSUInteger length = countingNonASCIICharacterAsTwo ? self.qmui_lengthWhenCountingNonASCIICharacterAsTwo : self.length;
+    QMUIAssert(index < length, @"NSString (QMUI)", @"%s, index out of bounds.", __func__);
+    if (index == 0 || index > length) return @"";
+    index = countingNonASCIICharacterAsTwo ? [self transformIndexToDefaultModeWithIndex:index] : index;// 实际计算都按照系统默认的 length 规则来
+    NSRange range = [self rangeOfComposedCharacterSequenceAtIndex:index - 1];
+    BOOL matchedCharacterSequence = range.length > 1;
+    return [self substringToIndex:matchedCharacterSequence && lessValue ? range.location + 1 : NSMaxRange(range)];
 }
 
 - (NSString *)qmui_substringAvoidBreakingUpCharacterSequencesToIndex:(NSUInteger)index {
@@ -228,7 +236,7 @@
 }
 
 - (NSString *)qmui_substringAvoidBreakingUpCharacterSequencesWithRange:(NSRange)range lessValue:(BOOL)lessValue countingNonASCIICharacterAsTwo:(BOOL)countingNonASCIICharacterAsTwo {
-    range = countingNonASCIICharacterAsTwo ? [self transformRangeToDefaultModeWithRange:range] : range;
+    range = countingNonASCIICharacterAsTwo ? [self transformRangeToDefaultModeWithRange:range] : range;// 实际计算都按照系统默认的 length 规则来
     NSRange characterSequencesRange = lessValue ? [self downRoundRangeOfComposedCharacterSequencesForRange:range] : [self rangeOfComposedCharacterSequencesForRange:range];
     NSString *resultString = [self substringWithRange:characterSequencesRange];
     return resultString;
@@ -261,9 +269,34 @@
 }
 
 - (NSString *)qmui_stringMatchedByPattern:(NSString *)pattern {
-    NSRange range = [self rangeOfString:pattern options:NSRegularExpressionSearch|NSCaseInsensitiveSearch];
-    if (range.location != NSNotFound) {
+    return [self qmui_stringMatchedByPattern:pattern groupIndex:0];
+}
+
+- (NSString *)qmui_stringMatchedByPattern:(NSString *)pattern groupIndex:(NSInteger)index {
+    if (pattern.length <= 0 || index < 0) return nil;
+    
+    NSRegularExpression *regx = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:nil];
+    NSTextCheckingResult *result = [regx firstMatchInString:self options:NSMatchingReportCompletion range:NSMakeRange(0, self.length)];
+    if (result.numberOfRanges > index) {
+        NSRange range = [result rangeAtIndex:index];
         return [self substringWithRange:range];
+    }
+    return nil;
+}
+
+- (NSString *)qmui_stringMatchedByPattern:(NSString *)pattern groupName:(NSString *)name {
+    if (@available(iOS 11.0, *)) {
+        if (pattern.length <= 0) return nil;
+        
+        NSRegularExpression *regx = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:nil];
+        NSTextCheckingResult *result = [regx firstMatchInString:self options:NSMatchingReportCompletion range:NSMakeRange(0, self.length)];
+        if (result.numberOfRanges > 1) {
+            NSRange range = [result rangeWithName:name];
+            QMUIAssert(range.location != NSNotFound, @"NSString (QMUI)", @"%s, 不存在名为 %@ 的 group name", __func__, name);
+            if (range.location != NSNotFound) {
+                return [self substringWithRange:range];
+            }
+        }
     }
     return nil;
 }

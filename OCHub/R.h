@@ -5,35 +5,107 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RLocalizableStrings: NSObject
 /**
-key: "Common.Cancel"
+key: "And"
+
+Undefined: "和"
+*/
+- (NSString*)and;
+/**
+key: "Cancel"
 
 Undefined: "取消"
 */
-- (NSString*)commonCancel;
+- (NSString*)cancel;
 /**
-key: "Common.ISee"
+key: "Error.Empty.Message"
 
-Undefined: "知道了"
+Undefined: "亲，当前无数据，请稍后重试"
 */
-- (NSString*)commonISee;
+- (NSString*)errorEmptyMessage;
 /**
-key: "Common.No"
+key: "Error.Empty.Title"
+
+Undefined: "无数据提示"
+*/
+- (NSString*)errorEmptyTitle;
+/**
+key: "Error.Network.Message"
+
+Undefined: "亲，请检查一下网络后再试试吧"
+*/
+- (NSString*)errorNetworkMessage;
+/**
+key: "Error.Network.Title"
+
+Undefined: "网络异常"
+*/
+- (NSString*)errorNetworkTitle;
+/**
+key: "Error.Retry.Title"
+
+Undefined: "点击重新加载"
+*/
+- (NSString*)errorRetryTitle;
+/**
+key: "Error.Server.Message"
+
+Undefined: "亲，数据异常，请稍后重试"
+*/
+- (NSString*)errorServerMessage;
+/**
+key: "Error.Server.Title"
+
+Undefined: "数据错误"
+*/
+- (NSString*)errorServerTitle;
+/**
+key: "Me"
+
+Undefined: "我的"
+*/
+- (NSString*)me;
+/**
+key: "No"
 
 Undefined: "否"
 */
-- (NSString*)commonNo;
+- (NSString*)no;
 /**
-key: "Common.OK"
+key: "OK"
 
-Undefined: "确认"
+Undefined: "确定"
 */
-- (NSString*)commonOK;
+- (NSString*)oK;
 /**
-key: "Common.Yes"
+key: "Pay Now"
+
+Undefined: "立即充值"
+*/
+- (NSString*)payNow;
+/**
+key: "Router Plugins"
+
+Undefined: "路由插件"
+*/
+- (NSString*)routerPlugins;
+/**
+key: "Sure"
+
+Undefined: "确定"
+*/
+- (NSString*)sure;
+/**
+key: "Unknown"
+
+Undefined: "未知"
+*/
+- (NSString*)unknown;
+/**
+key: "Yes"
 
 Undefined: "是"
 */
-- (NSString*)commonYes;
+- (NSString*)yes;
 @end
 
 
@@ -43,7 +115,12 @@ Undefined: "是"
 
 
 @interface RImages: NSObject
-- (UIImage*)appLaunch;
+- (UIImage*)appSlogan;
+- (UIImage*)appLogo;
+- (UIImage*)icTabbarPluginSelected;
+- (UIImage*)icTabbarMeSelected;
+- (UIImage*)icTabbarPluginNormal;
+- (UIImage*)icTabbarMeNormal;
 @end
 
 

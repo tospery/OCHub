@@ -1,11 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-OCHub/Pods-OCHub-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
 ${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework
-${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework
 ${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
-${BUILT_PRODUCTS_DIR}/DKNightVersion/DKNightVersion.framework
 ${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework
-${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework
 ${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework
 ${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework
 ${BUILT_PRODUCTS_DIR}/GVUserDefaults/GVUserDefaults.framework
@@ -13,7 +10,6 @@ ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
 ${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework
 ${BUILT_PRODUCTS_DIR}/LSAnimator/LSAnimator.framework
 ${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
-${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework
 ${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
 ${BUILT_PRODUCTS_DIR}/OCFrame/OCFrame.framework
@@ -23,13 +19,9 @@ ${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework
 ${BUILT_PRODUCTS_DIR}/QMUIKit/QMUIKit.framework
 ${BUILT_PRODUCTS_DIR}/RESTful/RESTful.framework
 ${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework
-${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework
-${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework
 ${BUILT_PRODUCTS_DIR}/TMCache/TMCache.framework
-${BUILT_PRODUCTS_DIR}/TTGTagCollectionView/TTGTagCollectionView.framework
 ${BUILT_PRODUCTS_DIR}/TYAlertController/TYAlertController.framework
 ${BUILT_PRODUCTS_DIR}/Toast/Toast.framework
 ${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework
-${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework
-${BUILT_PRODUCTS_DIR}/pop/pop.framework

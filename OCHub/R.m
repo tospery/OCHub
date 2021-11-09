@@ -2,11 +2,23 @@
 
 
 @implementation RLocalizableStrings
-- (NSString*)commonCancel { return NSLocalizedStringFromTableInBundle(@"Common.Cancel", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
-- (NSString*)commonISee { return NSLocalizedStringFromTableInBundle(@"Common.ISee", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
-- (NSString*)commonNo { return NSLocalizedStringFromTableInBundle(@"Common.No", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
-- (NSString*)commonOK { return NSLocalizedStringFromTableInBundle(@"Common.OK", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
-- (NSString*)commonYes { return NSLocalizedStringFromTableInBundle(@"Common.Yes", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)and { return NSLocalizedStringFromTableInBundle(@"And", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)cancel { return NSLocalizedStringFromTableInBundle(@"Cancel", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)errorEmptyMessage { return NSLocalizedStringFromTableInBundle(@"Error.Empty.Message", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)errorEmptyTitle { return NSLocalizedStringFromTableInBundle(@"Error.Empty.Title", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)errorNetworkMessage { return NSLocalizedStringFromTableInBundle(@"Error.Network.Message", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)errorNetworkTitle { return NSLocalizedStringFromTableInBundle(@"Error.Network.Title", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)errorRetryTitle { return NSLocalizedStringFromTableInBundle(@"Error.Retry.Title", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)errorServerMessage { return NSLocalizedStringFromTableInBundle(@"Error.Server.Message", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)errorServerTitle { return NSLocalizedStringFromTableInBundle(@"Error.Server.Title", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)me { return NSLocalizedStringFromTableInBundle(@"Me", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)no { return NSLocalizedStringFromTableInBundle(@"No", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)oK { return NSLocalizedStringFromTableInBundle(@"OK", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)payNow { return NSLocalizedStringFromTableInBundle(@"Pay Now", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)routerPlugins { return NSLocalizedStringFromTableInBundle(@"Router Plugins", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)sure { return NSLocalizedStringFromTableInBundle(@"Sure", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)unknown { return NSLocalizedStringFromTableInBundle(@"Unknown", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)yes { return NSLocalizedStringFromTableInBundle(@"Yes", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 @end
 
 
@@ -29,11 +41,21 @@
 
 
 @interface RImages ()
-@property (nonatomic, strong) UIImage* appLaunch;
+@property (nonatomic, strong) UIImage* appSlogan;
+@property (nonatomic, strong) UIImage* appLogo;
+@property (nonatomic, strong) UIImage* icTabbarPluginSelected;
+@property (nonatomic, strong) UIImage* icTabbarMeSelected;
+@property (nonatomic, strong) UIImage* icTabbarPluginNormal;
+@property (nonatomic, strong) UIImage* icTabbarMeNormal;
 @end
 
 @implementation RImages
-- (UIImage*)appLaunch { return [UIImage imageNamed:@"AppLaunch" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)appSlogan { return [UIImage imageNamed:@"AppSlogan" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)appLogo { return [UIImage imageNamed:@"AppLogo" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icTabbarPluginSelected { return [UIImage imageNamed:@"ic_tabbar_plugin_selected" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icTabbarMeSelected { return [UIImage imageNamed:@"ic_tabbar_me_selected" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icTabbarPluginNormal { return [UIImage imageNamed:@"ic_tabbar_plugin_normal" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icTabbarMeNormal { return [UIImage imageNamed:@"ic_tabbar_me_normal" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 @end
 
 

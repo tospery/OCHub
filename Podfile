@@ -1,33 +1,35 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.0'
+platform :ios, '11.0'
 use_frameworks!
 
 target "OCHub" do
 	pod 'OCFrame', :path => '../OCFrame'
 	
-	pod 'FontAwesomeKit', '2.2.1'
-	
+	# Base
 	pod 'Masonry', '1.1.0'
-	pod 'IQKeyboardManager', '6.5.4'
-	pod 'pop', '1.0.12'
-	pod 'SAMKeychain', '1.5.3'
-	pod 'MLeaksFinder', '1.0.0'
+	pod 'IQKeyboardManager', '6.5.6'
 	pod 'TMCache', '2.1.0'
 	pod 'BlocksKit', '2.2.5'
-	pod 'LSAnimator', '2.1.4'
 	pod 'R.objc', '0.8.2'
-	pod 'OHHTTPStubs', '8.0.0'
-	pod 'SDCycleScrollView', '1.80'
+	pod 'LSAnimator', '2.1.5'
+	pod 'FontAwesomeKit', '2.2.1'
+	pod 'OHHTTPStubs', '9.1.0'
+	
+	# Other
+	
+	# pod 'MXParallaxHeader', '1.1.0'
+	# pod 'MLeaksFinder', '1.0.0'
+	# pod 'pop', '1.0.12'
+	# pod 'SAMKeychain', '1.5.3'
+	# pod 'SDCycleScrollView', '1.80'
 	# pod 'TTTAttributedLabel', '2.0.0'
-	pod 'CHTCollectionViewWaterfallLayout', '0.9.8'
-	pod 'TTGTagCollectionView', '1.11.1'
+	# pod 'CHTCollectionViewWaterfallLayout', '0.9.8'
+	# pod 'TTGTagCollectionView', '1.11.1'
 	# pod 'TLYShyNavBar', '1.1.1'
 	# pod 'JSBadgeView', '2.0.0'
-  
 	# pod 'LTNavigationBar', '2.1.9'
 	# pod 'FDFullscreenPopGesture', '1.1'
-	
 	# pod 'AlibcTradeSDK', '4.0.0.8'
 	# pod 'AliAuthSDK', '2.0.0.3'
 	# pod 'mtopSDK', '3.0.0.4'
@@ -36,10 +38,6 @@ target "OCHub" do
 	# pod 'BCUserTrack', '5.2.0.11-appkeys'
 	# pod 'UTDID', '1.1.0.16'
 	# pod 'AlipaySDK', '2.0.0-bc'
-		
-	# 备份
-	# Core
-	# Base
 	# pod 'BuglyHotfix', '~> 2.1.0'
 	# pod 'AlibcTradeSDK', '~> 3.1.1.206'
 	# pod 'SDCycleScrollView', '~> 1.75'
@@ -122,5 +120,10 @@ target "OCHub" do
 	
 end
 
-
-
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+        end
+    end
+end

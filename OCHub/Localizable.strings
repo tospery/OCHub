@@ -2,13 +2,27 @@
   Localizable.strings
   OCHub
 
-  Created by 杨建祥 on 2020/6/8.
-  Copyright © 2020 杨建祥. All rights reserved.
+  Created by liaoya on 2021/11/9.
+  
 */
 
-/* 通用 */
-"Common.Yes" = "是";
-"Common.No" = "否";
-"Common.OK" = "确认";
-"Common.ISee" = "知道了";
-"Common.Cancel" = "取消";
+/* 单词 */
+"Yes" = "是";
+"No" = "否";
+"OK" = "确定";
+"Sure" = "确定";
+"Cancel" = "取消";
+"And" = "和";
+"Unknown" = "未知";
+"Me" = "我的";
+/* 词语 */
+"Router Plugins" = "路由插件";
+"Pay Now" = "立即充值";
+/* 句子 */
+"Error.Network.Title" = "网络异常";
+"Error.Network.Message" = "亲，请检查一下网络后再试试吧";
+"Error.Server.Title" = "数据错误";
+"Error.Server.Message" = "亲，数据异常，请稍后重试";
+"Error.Empty.Title" = "无数据提示";
+"Error.Empty.Message" = "亲，当前无数据，请稍后重试";
+"Error.Retry.Title" = "点击重新加载";

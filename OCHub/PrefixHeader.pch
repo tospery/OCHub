@@ -2,8 +2,7 @@
 //  PrefixHeader.pch
 //  OCHub
 //
-//  Created by 杨建祥 on 2020/6/8.
-//  Copyright © 2020 杨建祥. All rights reserved.
+//  Created by liaoya on 2021/11/9.
 //
 
 #ifndef PrefixHeader_pch
@@ -20,33 +19,22 @@
 
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
-#import <WebKit/WebKit.h>
 
-#pragma mark - Pod管理的第三方库
+#pragma mark - 三方库
 #import <OCFrame/OCFrame.h>
-//#import <AlibcTradeSDK/AlibcTradeSDK.h>
-//#import <AlibabaAuthSDK/ALBBSession.h>
-//#import <AlibabaAuthSDK/ALBBSDK.h>
-//#import <OHHTTPStubs/OHHTTPStubs.h>
-//#import <OHHTTPStubs/OHPathHelpers.h>
-//#import <BlocksKit/BlocksKit.h>
-//#import <BlocksKit/BlocksKit+UIKit.h>
-//#import <SDCycleScrollView/SDCycleScrollView.h>
-//#import <TTGTagCollectionView/TTGTextTagCollectionView.h>
-////#import <Masonry/Masonry.h>
-//#import <CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.h>
-////#import <TYAlertController/UIView+TYAlertView.h>
-////#import <TLYShyNavBar/TLYShyNavBar.h>
-////#import <JSBadgeView/JSBadgeView.h>
+#import <Masonry/Masonry.h>
+#import <OHHTTPStubs/HTTPStubs.h>
+#import <BlocksKit/BlocksKit.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
 
-#pragma mark - 手动管理的源码库
-//#import "SIAlertView.h"
-//#import "JPEngine.h"
-
-#pragma mark - 项目常用头文件
-#import "R.h"
+#pragma mark - 常用头文件
+//#import "R.h"
+//#import "Type.h"
 //#import "Constant.h"
 //#import "Function.h"
+//#import "NavigationController.h"
+//#import "UIView+Addition.h"
+//#import "Button.h"
 //#import "Utils.h"
 //#import "User.h"
 //#import "UserInfo.h"
@@ -102,3 +90,4 @@
 #endif
 
 #endif /* PrefixHeader_pch */
+

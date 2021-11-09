@@ -1,6 +1,6 @@
 /**
  * Tencent is pleased to support the open source community by making QMUI_iOS available.
- * Copyright (C) 2016-2020 THL A29 Limited, a Tencent company. All rights reserved.
+ * Copyright (C) 2016-2021 THL A29 Limited, a Tencent company. All rights reserved.
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
  * http://opensource.org/licenses/MIT
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
@@ -13,7 +13,7 @@
 #ifndef QMUIKit_h
 #define QMUIKit_h
 
-static NSString * const QMUI_VERSION = @"4.1.3";
+static NSString * const QMUI_VERSION = @"4.3.0";
 
 #if __has_include("CAAnimation+QMUI.h")
 #import "CAAnimation+QMUI.h"
@@ -97,6 +97,10 @@ static NSString * const QMUI_VERSION = @"4.1.3";
 
 #if __has_include("QMUIAssetsManager.h")
 #import "QMUIAssetsManager.h"
+#endif
+
+#if __has_include("QMUIBadgeProtocol.h")
+#import "QMUIBadgeProtocol.h"
 #endif
 
 #if __has_include("QMUIButton.h")
@@ -237,10 +241,6 @@ static NSString * const QMUI_VERSION = @"4.1.3";
 
 #if __has_include("QMUILabel.h")
 #import "QMUILabel.h"
-#endif
-
-#if __has_include("QMUILinkButton.h")
-#import "QMUILinkButton.h"
 #endif
 
 #if __has_include("QMUILog+QMUIConsole.h")
@@ -435,10 +435,6 @@ static NSString * const QMUI_VERSION = @"4.1.3";
 #import "QMUIToolbarButton.h"
 #endif
 
-#if __has_include("QMUIVisualEffectView.h")
-#import "QMUIVisualEffectView.h"
-#endif
-
 #if __has_include("QMUIWeakObjectContainer.h")
 #import "QMUIWeakObjectContainer.h"
 #endif
@@ -453,6 +449,10 @@ static NSString * const QMUI_VERSION = @"4.1.3";
 
 #if __has_include("UIActivityIndicatorView+QMUI.h")
 #import "UIActivityIndicatorView+QMUI.h"
+#endif
+
+#if __has_include("UIApplication+QMUI.h")
+#import "UIApplication+QMUI.h"
 #endif
 
 #if __has_include("UIBarItem+QMUI.h")
@@ -477,6 +477,10 @@ static NSString * const QMUI_VERSION = @"4.1.3";
 
 #if __has_include("UICollectionView+QMUICellSizeKeyCache.h")
 #import "UICollectionView+QMUICellSizeKeyCache.h"
+#endif
+
+#if __has_include("UICollectionViewCell+QMUI.h")
+#import "UICollectionViewCell+QMUI.h"
 #endif
 
 #if __has_include("UIColor+QMUI.h")
@@ -539,6 +543,10 @@ static NSString * const QMUI_VERSION = @"4.1.3";
 #import "UINavigationController+QMUI.h"
 #endif
 
+#if __has_include("UINavigationItem+QMUI.h")
+#import "UINavigationItem+QMUI.h"
+#endif
+
 #if __has_include("UIScrollView+QMUI.h")
 #import "UIScrollView+QMUI.h"
 #endif
@@ -579,6 +587,10 @@ static NSString * const QMUI_VERSION = @"4.1.3";
 #import "UITableViewCell+QMUI.h"
 #endif
 
+#if __has_include("UITableViewHeaderFooterView+QMUI.h")
+#import "UITableViewHeaderFooterView+QMUI.h"
+#endif
+
 #if __has_include("UITextField+QMUI.h")
 #import "UITextField+QMUI.h"
 #endif
@@ -599,6 +611,14 @@ static NSString * const QMUI_VERSION = @"4.1.3";
 #import "UIView+QMUI.h"
 #endif
 
+#if __has_include("UIView+QMUIBadge.h")
+#import "UIView+QMUIBadge.h"
+#endif
+
+#if __has_include("UIView+QMUIBorder.h")
+#import "UIView+QMUIBorder.h"
+#endif
+
 #if __has_include("UIView+QMUITheme.h")
 #import "UIView+QMUITheme.h"
 #endif
@@ -613,6 +633,10 @@ static NSString * const QMUI_VERSION = @"4.1.3";
 
 #if __has_include("UIVisualEffect+QMUITheme.h")
 #import "UIVisualEffect+QMUITheme.h"
+#endif
+
+#if __has_include("UIVisualEffectView+QMUI.h")
+#import "UIVisualEffectView+QMUI.h"
 #endif
 
 #if __has_include("UIWindow+QMUI.h")

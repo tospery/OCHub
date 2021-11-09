@@ -1,6 +1,6 @@
 /**
  * Tencent is pleased to support the open source community by making QMUI_iOS available.
- * Copyright (C) 2016-2020 THL A29 Limited, a Tencent company. All rights reserved.
+ * Copyright (C) 2016-2021 THL A29 Limited, a Tencent company. All rights reserved.
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
  * http://opensource.org/licenses/MIT
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  例如对于字符串“😊😞”，它的长度为4，若调用 [string qmui_substringAvoidBreakingUpCharacterSequencesFromIndex:1]，将返回“😊😞”。
  *  若调用系统的 [string substringFromIndex:1]，将返回“?😞”。（?表示乱码，因为第一个 emoji 表情被从中间裁开了）。
  *
- *  @param index 要从哪个 index 开始裁剪文字
+ *  @param index 要从哪个 index 开始裁剪文字，如果 countingNonASCIICharacterAsTwo 为 YES，则 index 也要按 YES 的方式来算
  *  @param lessValue 要按小的长度取，还是按大的长度取
  *  @param countingNonASCIICharacterAsTwo 是否按照 英文 1 个字符长度、中文 2 个字符长度的方式来裁剪
  *  @return 裁剪完的字符
@@ -81,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  例如对于字符串“😊😞”，它的长度为4，若调用 [string qmui_substringAvoidBreakingUpCharacterSequencesToIndex:1 lessValue:NO countingNonASCIICharacterAsTwo:NO]，将返回“😊”。
  *  若调用系统的 [string substringToIndex:1]，将返回“?”。（?表示乱码，因为第一个 emoji 表情被从中间裁开了）。
  *
- *  @param index 要裁剪到哪个 index
+ *  @param index 要裁剪到哪个 index 为止（不包含该 index，策略与系统的 substringToIndex: 一致），如果 countingNonASCIICharacterAsTwo 为 YES，则 index 也要按 YES 的方式来算
  *  @param lessValue 裁剪时若遇到“character sequences”，是向下取整还是向上取整。
  *  @param countingNonASCIICharacterAsTwo 是否按照 英文 1 个字符长度、中文 2 个字符长度的方式来裁剪
  *  @return 裁剪完的字符
@@ -132,6 +132,24 @@ NS_ASSUME_NONNULL_BEGIN
  @return 匹配到的第一个结果，如果没有匹配成功则返回 nil
  */
 - (NSString *)qmui_stringMatchedByPattern:(NSString *)pattern;
+
+/**
+ 用正则表达式匹配字符串，返回匹配到的第一个结果里的指定分组（由参数 index 指定）。
+ 例如使用 @"ing([\\d\\.]+)" 表达式匹配字符串 @"string0.05" 并指定参数 index = 1，则返回 @"0.05"。
+ @param pattern 正则表达式，可用括号表示分组
+ @param index 要返回第几个分组，0表示整个正则表达式匹配到的结果，1表示匹配到的结果里的第1个分组（第1个括号）
+ @return 返回匹配到的第一个结果里的指定分组，如果 index 超过总分组数则返回 nil。匹配失败也返回 nil。
+ */
+- (NSString *)qmui_stringMatchedByPattern:(NSString *)pattern groupIndex:(NSInteger)index;
+
+/**
+ 用正则表达式匹配字符串，返回匹配到的第一个结果里的指定分组（由参数 name 指定）。
+ 例如使用 @"ing(?<number>[\\d\\.]+)" 表达式匹配字符串 @"string0.05" 并指定参数 name 为 @"number"，则返回 @"0.05"。
+ @param pattern 正则表达式，可用括号表示分组，分组必须用 ?<name> 的语法来为分组命名。
+ @param name 要返回的分组名称，可通过 pattern 里的 ?<name> 语法对分组进行命名。
+ @return 返回匹配到的第一个结果里的指定分组，如果 name 不存在则返回 nil。匹配失败也返回 nil。
+ */
+- (NSString *)qmui_stringMatchedByPattern:(NSString *)pattern groupName:(NSString *)name API_AVAILABLE(ios(11.0));
 
 /**
  *  用正则表达式匹配字符串并将其替换为指定的另一个字符串，大小写不敏感

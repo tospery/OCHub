@@ -2,8 +2,7 @@
 //  main.m
 //  OCHub
 //
-//  Created by 杨建祥 on 2020/6/8.
-//  Copyright © 2020 杨建祥. All rights reserved.
+//  Created by liaoya on 2021/11/9.
 //
 
 #import <UIKit/UIKit.h>
