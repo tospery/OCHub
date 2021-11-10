@@ -28,6 +28,26 @@
     self.cellMapping = @{
         @"MineItem": @"MineCell"
     };
+    @weakify(self)
+    [self.selectCommand.executionSignals.switchToLatest subscribeNext:^(RACTuple *tuple) {
+        @strongify(self)
+//        BZMCollectionReactor *reactor = tuple.second;
+//        if ([reactor isKindOfClass:SettingReactor.class]) {
+//            SettingReactor *settingReactor = (SettingReactor *)reactor;
+//            if (settingReactor.target) {
+//                NSDictionary *parameters = settingReactor.model.title ? @{BZMParameter.title: settingReactor.model.title} : nil;
+//                [self.navigate sendNext:RACTuplePack(settingReactor.target, parameters)];
+//                return;
+//            }
+//            // YJX_TODO
+//            // 1. 微信没有信息的时候，进行授权拿信息、并上报给后台
+//        }
+        OCFCollectionItem *item = tuple.second;
+        if ([item isKindOfClass:MineItem.class]) {
+            // YJX_TODO 添加target
+            [self.navigate sendNext:RACTuplePack(OCFURLWithPattern(kPatternAbout), nil)];
+        }
+    }];
 }
 
 #pragma mark - Method

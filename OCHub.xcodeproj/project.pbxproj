@@ -13,6 +13,8 @@
 		8C283956273A57F60012A2F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C283954273A57F60012A2F2 /* LaunchScreen.storyboard */; };
 		8C283959273A57F60012A2F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C283958273A57F60012A2F2 /* main.m */; };
 		8C373491273B6BE30098CCCB /* MineParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373490273B6BE30098CCCB /* MineParallaxView.m */; };
+		8C373496273B909A0098CCCB /* GeneralViewReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373495273B909A0098CCCB /* GeneralViewReactor.m */; };
+		8C373499273B90AF0098CCCB /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373498273B90AF0098CCCB /* GeneralViewController.m */; };
 		8C9EE3A7273A5AD3005E6045 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C9EE3A6273A5AD3005E6045 /* Localizable.strings */; };
 		8C9EE3AB273A5D24005E6045 /* R.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9EE3AA273A5D23005E6045 /* R.m */; };
 		8CA11BEE273A69B000F56A99 /* theme_default.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA11BED273A69B000F56A99 /* theme_default.json */; };
@@ -47,6 +49,10 @@
 		8C283958273A57F60012A2F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C37348F273B6BE30098CCCB /* MineParallaxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineParallaxView.h; sourceTree = "<group>"; };
 		8C373490273B6BE30098CCCB /* MineParallaxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineParallaxView.m; sourceTree = "<group>"; };
+		8C373494273B909A0098CCCB /* GeneralViewReactor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralViewReactor.h; sourceTree = "<group>"; };
+		8C373495273B909A0098CCCB /* GeneralViewReactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralViewReactor.m; sourceTree = "<group>"; };
+		8C373497273B90AF0098CCCB /* GeneralViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralViewController.h; sourceTree = "<group>"; };
+		8C373498273B90AF0098CCCB /* GeneralViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralViewController.m; sourceTree = "<group>"; };
 		8C9EE3A6273A5AD3005E6045 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8C9EE3A9273A5D23005E6045 /* R.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R.h; sourceTree = "<group>"; };
 		8C9EE3AA273A5D23005E6045 /* R.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R.m; sourceTree = "<group>"; };
@@ -268,6 +274,8 @@
 				8CA11C27273A6C1600F56A99 /* MineViewReactor.m */,
 				8CF377A1273B5E3D00A6C347 /* TabBarReactor.h */,
 				8CF377A2273B5E3D00A6C347 /* TabBarReactor.m */,
+				8C373494273B909A0098CCCB /* GeneralViewReactor.h */,
+				8C373495273B909A0098CCCB /* GeneralViewReactor.m */,
 			);
 			path = Reactor;
 			sourceTree = "<group>";
@@ -281,6 +289,8 @@
 				8CA11C21273A6BE600F56A99 /* MineViewController.m */,
 				8CF377A4273B5E5500A6C347 /* TabBarController.h */,
 				8CF377A5273B5E5500A6C347 /* TabBarController.m */,
+				8C373497273B90AF0098CCCB /* GeneralViewController.h */,
+				8C373498273B90AF0098CCCB /* GeneralViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -456,9 +466,11 @@
 				8CA11C1F273A6BD900F56A99 /* TrendingViewController.m in Sources */,
 				8CA11C25273A6C0400F56A99 /* TrendingViewReactor.m in Sources */,
 				8C283959273A57F60012A2F2 /* main.m in Sources */,
+				8C373499273B90AF0098CCCB /* GeneralViewController.m in Sources */,
 				8CF377A3273B5E3D00A6C347 /* TabBarReactor.m in Sources */,
 				8CA11C04273A6A3000F56A99 /* OCFLibraryManager+Addition.m in Sources */,
 				8C373491273B6BE30098CCCB /* MineParallaxView.m in Sources */,
+				8C373496273B909A0098CCCB /* GeneralViewReactor.m in Sources */,
 				8CA11C17273A6B8900F56A99 /* MineCell.m in Sources */,
 				8CA11C1C273A6BC800F56A99 /* MineItem.m in Sources */,
 				8CA11C08273A6A3000F56A99 /* NavigationController.m in Sources */,
@@ -621,6 +633,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fcompatibility-qualified-id-block-type-checking",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jianxiang.ochub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -653,6 +669,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fcompatibility-qualified-id-block-type-checking",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jianxiang.ochub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

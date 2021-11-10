@@ -6,6 +6,7 @@
 //
 
 #import "OCFRouterManager+Addition.h"
+#import "GeneralViewReactor.h"
 
 @implementation OCFRouterManager (Addition)
 + (void)load {
@@ -17,21 +18,9 @@
 
 - (void)my_setupWithProvider:(OCFProvider *)provider navigator:(OCFNavigator *)navigator {
     [self my_setupWithProvider:provider navigator:navigator];
-    
-//    handler = [JLRRouteHandler handlerBlockForTargetClass:MessageCenterViewReactor.class completion:^BOOL(BZMViewReactor *reactor) {
-//        @strongify(self)
-//        return [self.navigator pushReactor:reactor animated:YES] != nil;
-//    }];
-//    [JLRoutes.globalRoutes addRoute:kPatternMessageCenter handler:handler];
-    
-//    JLRoutes.globalRoutes[@"/user/view/:userID"] = ^BOOL(NSDictionary *parameters) {
-//      // ...
-//    };
-//    [JLRoutes.globalRoutes addRoute:<#(nonnull NSString *)#> handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
-//        <#code#>
-//    }]
-    
-    // [JLRoutes.globalRoutes addRoute:@"about" handler:[JLRRouteHandler handlerBlockForTargetClass:<#(nonnull Class)#> completion:<#^BOOL(id<JLRRouteHandlerTarget>  _Nonnull createdObject)completionHandler#>]]
+    [JLRoutes.globalRoutes addRoute:kPatternAbout handler:[JLRRouteHandler handlerBlockForTargetClass:GeneralViewReactor.class completion:^BOOL(GeneralViewReactor *reactor) {
+        return [navigator pushReactor:reactor animated:YES] != nil;
+    }]];
 }
 
 @end

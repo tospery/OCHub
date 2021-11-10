@@ -19,8 +19,8 @@
 @implementation MineViewController
 @dynamic reactor;
 
-- (instancetype)initWithReactor:(OCFViewReactor *)reactor {
-    if (self = [super initWithReactor:reactor]) {
+- (instancetype)initWithReactor:(OCFViewReactor *)reactor navigator:(OCFNavigator *)navigator {
+    if (self = [super initWithReactor:reactor navigator:navigator]) {
         self.hidesBottomBarWhenPushed = NO;
         self.tabBarItem.title = R.string.localizable.mine;
         self.tabBarItem.image = [R.image.icTabbarMine imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];

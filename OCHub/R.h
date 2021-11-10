@@ -5,6 +5,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RLocalizableStrings: NSObject
 /**
+key: "About"
+
+Undefined: "关于"
+*/
+- (NSString*)about;
+/**
 key: "Cancel"
 
 Undefined: "取消"

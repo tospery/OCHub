@@ -2,6 +2,7 @@
 
 
 @implementation RLocalizableStrings
+- (NSString*)about { return NSLocalizedStringFromTableInBundle(@"About", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)cancel { return NSLocalizedStringFromTableInBundle(@"Cancel", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)errorEmptyMessage { return NSLocalizedStringFromTableInBundle(@"Error.Empty.Message", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)errorEmptyTitle { return NSLocalizedStringFromTableInBundle(@"Error.Empty.Title", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
