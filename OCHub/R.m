@@ -2,7 +2,6 @@
 
 
 @implementation RLocalizableStrings
-- (NSString*)and { return NSLocalizedStringFromTableInBundle(@"And", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)cancel { return NSLocalizedStringFromTableInBundle(@"Cancel", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)errorEmptyMessage { return NSLocalizedStringFromTableInBundle(@"Error.Empty.Message", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)errorEmptyTitle { return NSLocalizedStringFromTableInBundle(@"Error.Empty.Title", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
@@ -11,12 +10,13 @@
 - (NSString*)errorRetryTitle { return NSLocalizedStringFromTableInBundle(@"Error.Retry.Title", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)errorServerMessage { return NSLocalizedStringFromTableInBundle(@"Error.Server.Message", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)errorServerTitle { return NSLocalizedStringFromTableInBundle(@"Error.Server.Title", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
-- (NSString*)me { return NSLocalizedStringFromTableInBundle(@"Me", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)mine { return NSLocalizedStringFromTableInBundle(@"Mine", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)no { return NSLocalizedStringFromTableInBundle(@"No", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)oK { return NSLocalizedStringFromTableInBundle(@"OK", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)payNow { return NSLocalizedStringFromTableInBundle(@"Pay Now", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)routerPlugins { return NSLocalizedStringFromTableInBundle(@"Router Plugins", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)sure { return NSLocalizedStringFromTableInBundle(@"Sure", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
+- (NSString*)trending { return NSLocalizedStringFromTableInBundle(@"Trending", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)unknown { return NSLocalizedStringFromTableInBundle(@"Unknown", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 - (NSString*)yes { return NSLocalizedStringFromTableInBundle(@"Yes", @"Localizable", [NSBundle bundleForClass:self.class], nil); }
 @end
@@ -42,16 +42,20 @@
 
 @interface RImages ()
 @property (nonatomic, strong) UIImage* appSlogan;
+@property (nonatomic, strong) UIImage* icPortalAbout;
 @property (nonatomic, strong) UIImage* appLogo;
 @property (nonatomic, strong) UIImage* icTabbarTrending;
-@property (nonatomic, strong) UIImage* icTabbarCenter;
+@property (nonatomic, strong) UIImage* icTabbarMine;
+@property (nonatomic, strong) UIImage* icPortalAccount;
 @end
 
 @implementation RImages
 - (UIImage*)appSlogan { return [UIImage imageNamed:@"AppSlogan" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icPortalAbout { return [UIImage imageNamed:@"ic_portal_about" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)appLogo { return [UIImage imageNamed:@"AppLogo" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)icTabbarTrending { return [UIImage imageNamed:@"ic_tabbar_trending" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
-- (UIImage*)icTabbarCenter { return [UIImage imageNamed:@"ic_tabbar_center" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icTabbarMine { return [UIImage imageNamed:@"ic_tabbar_mine" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icPortalAccount { return [UIImage imageNamed:@"ic_portal_account" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 @end
 
 

@@ -10,10 +10,6 @@
 
 typedef NS_ENUM(NSInteger, PortalType){
     PortalTypeNone,
-    PortalTypeAccount,
-    PortalTypeNotice,
-    PortalTypeService,
-    PortalTypeDevice,
     PortalTypeAbout,
     PortalTypeTotal
 };

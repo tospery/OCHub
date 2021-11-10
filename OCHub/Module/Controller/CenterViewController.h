@@ -1,16 +1,12 @@
 //
-//  CenterViewController.h
+//  MineViewController.h
 //  OCHub
 //
 //  Created by liaoya on 2021/11/9.
 //
 
-#import <UIKit/UIKit.h>
+#import <OCFrame/OCFrame.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface CenterViewController : UIViewController
+@interface MineViewController : OCFViewController
 
 @end
-
-NS_ASSUME_NONNULL_END

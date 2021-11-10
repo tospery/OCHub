@@ -6,16 +6,30 @@
 //
 
 #import "TrendingViewController.h"
+#import "TrendingViewReactor.h"
 
 @interface TrendingViewController ()
+@property (nonatomic, strong, readwrite) TrendingViewReactor *reactor;
 
 @end
 
 @implementation TrendingViewController
+@dynamic reactor;
+
+- (instancetype)initWithReactor:(OCFViewReactor *)reactor {
+    if (self = [super initWithReactor:reactor]) {
+        self.hidesBottomBarWhenPushed = NO;
+        self.tabBarItem.title = R.string.localizable.trending;
+        self.tabBarItem.image = [R.image.icTabbarTrending imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        self.tabBarItem.selectedImage = self.tabBarItem.image;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor qmui_randomColor];
 }
 
 /*

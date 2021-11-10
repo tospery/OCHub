@@ -1,13 +1,13 @@
 //
-//  Button.m
+//  MineCell.m
 //  OCHub
 //
 //  Created by liaoya on 2021/11/9.
 //
 
-#import "Button.h"
+#import "MineCell.h"
 
-@implementation Button
+@implementation MineCell
 
 /*
 // Only override drawRect: if you perform custom drawing.

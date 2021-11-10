@@ -65,6 +65,7 @@ PODS:
   - Mantle/extobjc (2.1.1)
   - Masonry (1.1.0)
   - MJRefresh (3.7.2)
+  - MXParallaxHeader (1.1.0)
   - OCFrame (1.0.1):
     - CocoaLumberjack (= 3.7.2)
     - DZNEmptyDataSet (= 1.8.1)
@@ -126,6 +127,7 @@ DEPENDENCIES:
   - IQKeyboardManager (= 6.5.6)
   - LSAnimator (= 2.1.5)
   - Masonry (= 1.1.0)
+  - MXParallaxHeader (= 1.1.0)
   - OCFrame (from `../OCFrame`)
   - OHHTTPStubs (= 9.1.0)
   - R.objc (= 0.8.2)
@@ -146,6 +148,7 @@ SPEC REPOS:
     - Mantle
     - Masonry
     - MJRefresh
+    - MXParallaxHeader
     - OHHTTPStubs
     - PINCache
     - PINOperation
@@ -178,6 +181,7 @@ SPEC CHECKSUMS:
   Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
+  MXParallaxHeader: de3c867e10ba46e8f6e20c8ee1f2a910372b3b94
   OCFrame: 52ab9e034dba1f6a5dcf6a2867149a666a8b7d7c
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
@@ -193,6 +197,6 @@ SPEC CHECKSUMS:
   TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
 
-PODFILE CHECKSUM: d186756f278d94469d1af06a1926cc75dca4bc2d
+PODFILE CHECKSUM: f0893a7f09d52f7382ca72e439e6cfea0863fa24
 
 COCOAPODS: 1.11.2

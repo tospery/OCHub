@@ -17,8 +17,8 @@ target "OCHub" do
 	pod 'OHHTTPStubs', '9.1.0'
 	
 	# Other
+  pod 'MXParallaxHeader', '1.1.0'
 	
-	# pod 'MXParallaxHeader', '1.1.0'
 	# pod 'MLeaksFinder', '1.0.0'
 	# pod 'pop', '1.0.12'
 	# pod 'SAMKeychain', '1.5.3'

@@ -1,12 +1,12 @@
 //
-//  Center.m
+//  Mine.m
 //  OCHub
 //
 //  Created by liaoya on 2021/11/9.
 //
 
-#import "Center.h"
+#import "Mine.h"
 
-@implementation Center
+@implementation Mine
 
 @end

@@ -5,12 +5,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RLocalizableStrings: NSObject
 /**
-key: "And"
-
-Undefined: "和"
-*/
-- (NSString*)and;
-/**
 key: "Cancel"
 
 Undefined: "取消"
@@ -59,11 +53,11 @@ Undefined: "数据错误"
 */
 - (NSString*)errorServerTitle;
 /**
-key: "Me"
+key: "Mine"
 
 Undefined: "我的"
 */
-- (NSString*)me;
+- (NSString*)mine;
 /**
 key: "No"
 
@@ -95,6 +89,12 @@ Undefined: "确定"
 */
 - (NSString*)sure;
 /**
+key: "Trending"
+
+Undefined: "趋势"
+*/
+- (NSString*)trending;
+/**
 key: "Unknown"
 
 Undefined: "未知"
@@ -116,9 +116,11 @@ Undefined: "是"
 
 @interface RImages: NSObject
 - (UIImage*)appSlogan;
+- (UIImage*)icPortalAbout;
 - (UIImage*)appLogo;
 - (UIImage*)icTabbarTrending;
-- (UIImage*)icTabbarCenter;
+- (UIImage*)icTabbarMine;
+- (UIImage*)icPortalAccount;
 @end
 
 
