@@ -7,6 +7,6 @@
 
 #import <OCFrame/OCFrame.h>
 
-@interface GeneralViewController : OCFViewController
+@interface GeneralViewController : OCFCollectionViewController
 
 @end

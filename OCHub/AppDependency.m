@@ -31,6 +31,7 @@
 
 - (void)test:(NSDictionary *)launchOptions {
     OCFLogDebug(kOCFLogTagTest, @"测试开始");
+    OCFLogDebug(kOCFLogTagTest, @"%@", UIApplication.sharedApplication.ocf_baseWebUrlString);
     OCFLogDebug(kOCFLogTagTest, @"测试结束");
 }
 

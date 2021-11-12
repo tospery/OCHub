@@ -7,6 +7,7 @@
 
 #import "OCFRouterManager+Addition.h"
 #import "GeneralViewReactor.h"
+#import "WebViewReactor.h"
 
 @implementation OCFRouterManager (Addition)
 + (void)load {
@@ -19,6 +20,13 @@
 - (void)my_setupWithProvider:(OCFProvider *)provider navigator:(OCFNavigator *)navigator {
     [self my_setupWithProvider:provider navigator:navigator];
     [JLRoutes.globalRoutes addRoute:kPatternAbout handler:[JLRRouteHandler handlerBlockForTargetClass:GeneralViewReactor.class completion:^BOOL(GeneralViewReactor *reactor) {
+        return [navigator pushReactor:reactor animated:YES] != nil;
+    }]];
+    [JLRoutes.globalRoutes addRoute:kOCFPatternWeb handler:[JLRRouteHandler handlerBlockForTargetClass:WebViewReactor.class completion:^BOOL(WebViewReactor *reactor) {
+        NSString *scheme = reactor.url.scheme;
+        if (![scheme isEqualToString:@"http"] && ![scheme isEqualToString:@"https"]) {
+            return NO;
+        }
         return [navigator pushReactor:reactor animated:YES] != nil;
     }]];
 }

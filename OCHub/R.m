@@ -47,7 +47,7 @@
 @property (nonatomic, strong) UIImage* appLogo;
 @property (nonatomic, strong) UIImage* icTabbarTrending;
 @property (nonatomic, strong) UIImage* icTabbarMine;
-@property (nonatomic, strong) UIImage* icPortalAccount;
+@property (nonatomic, strong) UIImage* icPortalWebsite;
 @end
 
 @implementation RImages
@@ -56,7 +56,7 @@
 - (UIImage*)appLogo { return [UIImage imageNamed:@"AppLogo" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)icTabbarTrending { return [UIImage imageNamed:@"ic_tabbar_trending" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)icTabbarMine { return [UIImage imageNamed:@"ic_tabbar_mine" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
-- (UIImage*)icPortalAccount { return [UIImage imageNamed:@"ic_portal_account" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icPortalWebsite { return [UIImage imageNamed:@"ic_portal_website" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 @end
 
 

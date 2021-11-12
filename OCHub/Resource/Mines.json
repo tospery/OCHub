@@ -1,7 +1,12 @@
 [
     {
         "id":1,
-        "title":"关于迅游",
+        "title":"官网",
+        "icon":"ic_portal_website"
+    },
+    {
+        "id":2,
+        "title":"关于",
         "icon":"ic_portal_about"
     }
 ]

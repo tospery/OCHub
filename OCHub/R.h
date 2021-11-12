@@ -126,7 +126,7 @@ Undefined: "是"
 - (UIImage*)appLogo;
 - (UIImage*)icTabbarTrending;
 - (UIImage*)icTabbarMine;
-- (UIImage*)icPortalAccount;
+- (UIImage*)icPortalWebsite;
 @end
 
 

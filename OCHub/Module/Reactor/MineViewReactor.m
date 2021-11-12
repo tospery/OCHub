@@ -43,10 +43,14 @@
 //            // 1. 微信没有信息的时候，进行授权拿信息、并上报给后台
 //        }
         OCFCollectionItem *item = tuple.second;
-        if ([item isKindOfClass:MineItem.class]) {
-            // YJX_TODO 添加target
-            [self.navigate sendNext:RACTuplePack(OCFURLWithPattern(kPatternAbout), nil)];
-        }
+//        if ([item isKindOfClass:MineItem.class]) {
+//            // YJX_TODO 添加target
+//            // [self.navigate sendNext:RACTuplePack(OCFURLWithPattern(kPatternAbout), nil)];
+//            [self.navigate sendNext:RACTuplePack(OCFURLWithStr(UIApplication.sharedApplication.ocf_baseWebUrlString), nil)];
+//        } else {
+//            // [self.navigate sendNext:RACTuplePack(OCFURLWithStr(UIApplication.sharedApplication.ocf_baseWebUrlString), nil)];
+//        }
+        [self.navigate sendNext:RACTuplePack(OCFURLWithStr(item.model.target), nil)];
     }];
 }
 

@@ -7,7 +7,7 @@
 
 #import <OCFrame/OCFrame.h>
 
-@interface GeneralViewReactor : OCFViewReactor
+@interface GeneralViewReactor : OCFCollectionViewReactor
 
 @end
 

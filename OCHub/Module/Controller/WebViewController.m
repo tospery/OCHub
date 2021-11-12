@@ -1,20 +1,17 @@
 //
-//  GeneralViewController.m
+//  WebViewController.m
 //  OCHub
 //
-//  Created by liaoya on 2021/11/10.
+//  Created by liaoya on 2021/11/11.
 //
 
-#import "GeneralViewController.h"
-#import "GeneralViewReactor.h"
+#import "WebViewController.h"
 
-@interface GeneralViewController ()
-@property (nonatomic, strong, readwrite) GeneralViewReactor *reactor;
+@interface WebViewController ()
 
 @end
 
-@implementation GeneralViewController
-@dynamic reactor;
+@implementation WebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
