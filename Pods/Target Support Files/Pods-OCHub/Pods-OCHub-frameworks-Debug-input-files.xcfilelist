@@ -6,6 +6,7 @@ ${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework
 ${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework
 ${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework
 ${BUILT_PRODUCTS_DIR}/GVUserDefaults/GVUserDefaults.framework
+${BUILT_PRODUCTS_DIR}/Giotto/Giotto.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
 ${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework
 ${BUILT_PRODUCTS_DIR}/LSAnimator/LSAnimator.framework

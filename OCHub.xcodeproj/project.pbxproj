@@ -16,6 +16,7 @@
 		8C373496273B909A0098CCCB /* GeneralViewReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373495273B909A0098CCCB /* GeneralViewReactor.m */; };
 		8C373499273B90AF0098CCCB /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373498273B90AF0098CCCB /* GeneralViewController.m */; };
 		8C7FD4BF273D0931002FDE4E /* UIApplication+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7FD4BE273D0931002FDE4E /* UIApplication+Addition.m */; };
+		8C874C70273E5B1500EB4EF1 /* theme_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C874C6F273E5B1500EB4EF1 /* theme_default.plist */; };
 		8C9EE3A7273A5AD3005E6045 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C9EE3A6273A5AD3005E6045 /* Localizable.strings */; };
 		8C9EE3AB273A5D24005E6045 /* R.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9EE3AA273A5D23005E6045 /* R.m */; };
 		8CA11BEE273A69B000F56A99 /* theme_default.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA11BED273A69B000F56A99 /* theme_default.json */; };
@@ -58,6 +59,7 @@
 		8C373498273B90AF0098CCCB /* GeneralViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralViewController.m; sourceTree = "<group>"; };
 		8C7FD4BD273D0931002FDE4E /* UIApplication+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Addition.h"; sourceTree = "<group>"; };
 		8C7FD4BE273D0931002FDE4E /* UIApplication+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Addition.m"; sourceTree = "<group>"; };
+		8C874C6F273E5B1500EB4EF1 /* theme_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = theme_default.plist; sourceTree = "<group>"; };
 		8C9EE3A6273A5AD3005E6045 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8C9EE3A9273A5D23005E6045 /* R.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R.h; sourceTree = "<group>"; };
 		8C9EE3AA273A5D23005E6045 /* R.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R.m; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		8CA11BEC273A699B00F56A99 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8C874C6F273E5B1500EB4EF1 /* theme_default.plist */,
 				8CA11BED273A69B000F56A99 /* theme_default.json */,
 				8CF377AA273B6A1A00A6C347 /* Mines.json */,
 			);
@@ -401,6 +404,7 @@
 				8CA11BEE273A69B000F56A99 /* theme_default.json in Resources */,
 				8C9EE3A7273A5AD3005E6045 /* Localizable.strings in Resources */,
 				8CF377AB273B6A1A00A6C347 /* Mines.json in Resources */,
+				8C874C70273E5B1500EB4EF1 /* theme_default.plist in Resources */,
 				8C283953273A57F60012A2F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +428,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/R.objc/Robjc\" -p \"$SRCROOT/OCHub\" --skip-themes\n";
+			shellScript = "\"${PODS_ROOT}/R.objc/Robjc\" -p \"$SRCROOT/OCHub\"\n";
 		};
 		9782D32F3FCC233625585F2C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

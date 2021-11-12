@@ -38,6 +38,9 @@
     "JLRoutes": [
       "2.1"
     ],
+    "Giotto": [
+      "0.3.7"
+    ],
     "SwiftTheme": [
       "0.6.0"
     ],

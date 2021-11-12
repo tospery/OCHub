@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+@import Giotto;
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -130,6 +131,65 @@ Undefined: "是"
 @end
 
 
+@interface RStyle: NSObject
+@property (nonatomic, strong) NSString* identifier;
+- (void)applyTo:(nullable id)object;
+@end
+
+
+@interface RConstants: NSObject
+- (UIColor*)COLOR_BACKGROUND_BADGE;
+- (UIColor*)COLOR_BACKGROUND_COMMON;
+- (UIColor*)COLOR_BACKGROUND_CONTENT;
+- (UIColor*)COLOR_BACKGROUND_TEST;
+- (UIColor*)COLOR_BACKGROUND_TRANSLUCENT;
+- (UIColor*)COLOR_BORDER_TEXTFIELD;
+- (UIColor*)COLOR_BUTTON_BACKGROUND;
+- (UIColor*)COLOR_BUTTON_BACKGROUND_SELECTED;
+- (UIColor*)COLOR_CLEAR;
+- (UIColor*)COLOR_ERROR;
+- (UIColor*)COLOR_HIDER_BACKGROUND;
+- (UIColor*)COLOR_LOGIN_BUTTON;
+- (UIColor*)COLOR_OK;
+- (UIColor*)COLOR_TEXT_COMMON;
+- (UIColor*)COLOR_WARNING;
+- (NSNumber*)DIMENSION_CORNER_RADIUS_COMMON;
+- (NSNumber*)DIMENSION_FONT_COMMON;
+- (NSString*)FONT_BOLD;
+- (UIFont*)FONT_CHART_SPOKE;
+- (UIFont*)FONT_CHART_SPOKE_DETAIL;
+- (UIFont*)FONT_GRAPHIC_OBJECT_DATA;
+- (UIFont*)FONT_GRAPHIC_OBJECT_DESCRIPTION;
+- (UIFont*)FONT_GRAPHIC_OBJECT_HEADER_DESCRIPTION;
+- (UIFont*)FONT_GRAPHIC_OBJECT_HEADER_VALUE;
+- (NSString*)FONT_ITALIC;
+- (NSString*)FONT_REGULAR;
+@end
+
+
+@interface RStyles: NSObject
+- (RStyle*)commonBoldLabel;
+- (RStyle*)commonBorderedView;
+- (RStyle*)commonColoredButton;
+- (RStyle*)commonColoredButtonSelected;
+- (RStyle*)commonColoredInverseButton;
+- (RStyle*)commonLabel;
+- (RStyle*)commonScrollViewController;
+- (RStyle*)commonTextField;
+- (RStyle*)commonTextualButton;
+- (RStyle*)commonViewController;
+- (RStyle*)mineViewController;
+- (RStyle*)testViewController;
+- (RStyle*)trendingViewController;
+@end
+
+
+@interface RThemes: NSObject
+- (RConstants*)constants;
+- (RStyles*)styles;
+@end
+
+
 @interface RLaunchScreen: NSObject
 - (__kindof UIViewController*)instantiateInitialViewController;
 @end
@@ -153,6 +213,7 @@ Undefined: "是"
 @interface R: NSObject
 + (RStrings*)string;
 + (RImages*)image;
++ (RThemes*)theme;
 + (RStoryboards*)storyboard;
 + (RSegues*)segue;
 @end
