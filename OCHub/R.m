@@ -107,6 +107,7 @@
 @property (nonatomic, strong) RStyle* commonScrollViewController;
 @property (nonatomic, strong) RStyle* commonTextField;
 @property (nonatomic, strong) RStyle* commonTextualButton;
+@property (nonatomic, strong) RStyle* commonView;
 @property (nonatomic, strong) RStyle* commonViewController;
 @property (nonatomic, strong) RStyle* mineViewController;
 @property (nonatomic, strong) RStyle* testViewController;
@@ -211,6 +212,17 @@
 		_commonTextualButton.identifier = @"CommonTextualButton";
 	}
 	return _commonTextualButton;
+}
+
+
+- (RStyle*)commonView
+{	
+	if (!_commonView)
+	{
+		_commonView = [RStyle new];
+		_commonView.identifier = @"CommonView";
+	}
+	return _commonView;
 }
 
 

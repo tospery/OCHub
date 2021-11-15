@@ -177,6 +177,7 @@ Undefined: "是"
 - (RStyle*)commonScrollViewController;
 - (RStyle*)commonTextField;
 - (RStyle*)commonTextualButton;
+- (RStyle*)commonView;
 - (RStyle*)commonViewController;
 - (RStyle*)mineViewController;
 - (RStyle*)testViewController;

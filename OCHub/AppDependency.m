@@ -31,6 +31,9 @@
 
 - (void)test:(NSDictionary *)launchOptions {
     OCFLogDebug(kOCFLogTagTest, @"测试开始");
+    // primaryColor
+    // id aaa = [ThemeManager valueForKeyPath:@"primaryColor"];
+    // id bbb = [ThemeManager colorFor:@"primaryColor"];
     OCFLogDebug(kOCFLogTagTest, @"测试结束");
 }
 
