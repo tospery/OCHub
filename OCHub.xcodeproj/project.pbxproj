@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		87CB06CB50FFC15598C53EFF /* Pods_OCHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED061F19B769E088A4EFFD5 /* Pods_OCHub.framework */; };
+		8C2104972742391A00F486D2 /* BaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2104962742391A00F486D2 /* BaseResponse.m */; };
+		8C21049A2742393100F486D2 /* BaseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2104992742393100F486D2 /* BaseList.m */; };
+		8C21049D274239D200F486D2 /* OCHubSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C21049C274239D200F486D2 /* OCHubSessionManager.m */; };
+		8C2104A027423A9300F486D2 /* OCFProvider+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C21049F27423A9300F486D2 /* OCFProvider+Network.m */; };
+		8C2104A327423BCC00F486D2 /* OCFProvider+OCHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2104A227423BCC00F486D2 /* OCFProvider+OCHub.m */; };
 		8C283948273A57F40012A2F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C283947273A57F40012A2F2 /* AppDelegate.m */; };
 		8C283953273A57F60012A2F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C283952273A57F60012A2F2 /* Assets.xcassets */; };
 		8C283956273A57F60012A2F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C283954273A57F60012A2F2 /* LaunchScreen.storyboard */; };
@@ -15,9 +20,12 @@
 		8C373491273B6BE30098CCCB /* MineParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373490273B6BE30098CCCB /* MineParallaxView.m */; };
 		8C373496273B909A0098CCCB /* GeneralViewReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373495273B909A0098CCCB /* GeneralViewReactor.m */; };
 		8C373499273B90AF0098CCCB /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373498273B90AF0098CCCB /* GeneralViewController.m */; };
+		8C6FC8272741FA5C003F5F09 /* R.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC8252741FA5C003F5F09 /* R.m */; };
+		8C6FC83227420014003F5F09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC83127420014003F5F09 /* User.m */; };
+		8C6FC835274200B8003F5F09 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC834274200B8003F5F09 /* Configuration.m */; };
+		8C6FC838274200CF003F5F09 /* Preference.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC837274200CF003F5F09 /* Preference.m */; };
 		8C7FD4BF273D0931002FDE4E /* UIApplication+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7FD4BE273D0931002FDE4E /* UIApplication+Addition.m */; };
 		8C9EE3A7273A5AD3005E6045 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C9EE3A6273A5AD3005E6045 /* Localizable.strings */; };
-		8C9EE3AB273A5D24005E6045 /* R.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9EE3AA273A5D23005E6045 /* R.m */; };
 		8CA11BEE273A69B000F56A99 /* theme_default.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA11BED273A69B000F56A99 /* theme_default.json */; };
 		8CA11C03273A6A3000F56A99 /* OCFRouterManager+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA11BF5273A6A3000F56A99 /* OCFRouterManager+Addition.m */; };
 		8CA11C04273A6A3000F56A99 /* OCFLibraryManager+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA11BF6273A6A3000F56A99 /* OCFLibraryManager+Addition.m */; };
@@ -43,6 +51,16 @@
 
 /* Begin PBXFileReference section */
 		4ED061F19B769E088A4EFFD5 /* Pods_OCHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2104952742391A00F486D2 /* BaseResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseResponse.h; sourceTree = "<group>"; };
+		8C2104962742391A00F486D2 /* BaseResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseResponse.m; sourceTree = "<group>"; };
+		8C2104982742393100F486D2 /* BaseList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseList.h; sourceTree = "<group>"; };
+		8C2104992742393100F486D2 /* BaseList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseList.m; sourceTree = "<group>"; };
+		8C21049B274239D200F486D2 /* OCHubSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHubSessionManager.h; sourceTree = "<group>"; };
+		8C21049C274239D200F486D2 /* OCHubSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHubSessionManager.m; sourceTree = "<group>"; };
+		8C21049E27423A9300F486D2 /* OCFProvider+Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCFProvider+Network.h"; sourceTree = "<group>"; };
+		8C21049F27423A9300F486D2 /* OCFProvider+Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OCFProvider+Network.m"; sourceTree = "<group>"; };
+		8C2104A127423BCC00F486D2 /* OCFProvider+OCHub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCFProvider+OCHub.h"; sourceTree = "<group>"; };
+		8C2104A227423BCC00F486D2 /* OCFProvider+OCHub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OCFProvider+OCHub.m"; sourceTree = "<group>"; };
 		8C283943273A57F40012A2F2 /* OCHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C283946273A57F40012A2F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C283947273A57F40012A2F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,11 +74,17 @@
 		8C373495273B909A0098CCCB /* GeneralViewReactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralViewReactor.m; sourceTree = "<group>"; };
 		8C373497273B90AF0098CCCB /* GeneralViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralViewController.h; sourceTree = "<group>"; };
 		8C373498273B90AF0098CCCB /* GeneralViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralViewController.m; sourceTree = "<group>"; };
+		8C6FC8252741FA5C003F5F09 /* R.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R.m; sourceTree = "<group>"; };
+		8C6FC8262741FA5C003F5F09 /* R.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R.h; sourceTree = "<group>"; };
+		8C6FC83027420014003F5F09 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		8C6FC83127420014003F5F09 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		8C6FC833274200B8003F5F09 /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		8C6FC834274200B8003F5F09 /* Configuration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		8C6FC836274200CF003F5F09 /* Preference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Preference.h; sourceTree = "<group>"; };
+		8C6FC837274200CF003F5F09 /* Preference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preference.m; sourceTree = "<group>"; };
 		8C7FD4BD273D0931002FDE4E /* UIApplication+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Addition.h"; sourceTree = "<group>"; };
 		8C7FD4BE273D0931002FDE4E /* UIApplication+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Addition.m"; sourceTree = "<group>"; };
 		8C9EE3A6273A5AD3005E6045 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		8C9EE3A9273A5D23005E6045 /* R.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R.h; sourceTree = "<group>"; };
-		8C9EE3AA273A5D23005E6045 /* R.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R.m; sourceTree = "<group>"; };
 		8C9EE3AC273A5D91005E6045 /* OCHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OCHub.entitlements; sourceTree = "<group>"; };
 		8C9EE3AD273A5ECB005E6045 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8CA11BED273A69B000F56A99 /* theme_default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = theme_default.json; sourceTree = "<group>"; };
@@ -130,6 +154,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8C210494274238E500F486D2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8C21049E27423A9300F486D2 /* OCFProvider+Network.h */,
+				8C21049F27423A9300F486D2 /* OCFProvider+Network.m */,
+				8C2104952742391A00F486D2 /* BaseResponse.h */,
+				8C2104962742391A00F486D2 /* BaseResponse.m */,
+				8C2104982742393100F486D2 /* BaseList.h */,
+				8C2104992742393100F486D2 /* BaseList.m */,
+				8C21049B274239D200F486D2 /* OCHubSessionManager.h */,
+				8C21049C274239D200F486D2 /* OCHubSessionManager.m */,
+				8C2104A127423BCC00F486D2 /* OCFProvider+OCHub.h */,
+				8C2104A227423BCC00F486D2 /* OCFProvider+OCHub.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		8C28393A273A57F40012A2F2 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +203,8 @@
 		8C9EE3A5273A5AA9005E6045 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8C6FC8262741FA5C003F5F09 /* R.h */,
+				8C6FC8252741FA5C003F5F09 /* R.m */,
 				8C283946273A57F40012A2F2 /* AppDelegate.h */,
 				8C283947273A57F40012A2F2 /* AppDelegate.m */,
 				8C283952273A57F60012A2F2 /* Assets.xcassets */,
@@ -171,8 +214,6 @@
 				8C283958273A57F60012A2F2 /* main.m */,
 				8C9EE3AC273A5D91005E6045 /* OCHub.entitlements */,
 				8C9EE3AD273A5ECB005E6045 /* PrefixHeader.pch */,
-				8C9EE3A9273A5D23005E6045 /* R.h */,
-				8C9EE3AA273A5D23005E6045 /* R.m */,
 				8CF3779F273B5BD100A6C347 /* readme.txt */,
 				8CF377A7273B630F00A6C347 /* AppDependency.h */,
 				8CF377A8273B630F00A6C347 /* AppDependency.m */,
@@ -192,6 +233,7 @@
 		8CA11BEF273A69C100F56A99 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				8C210494274238E500F486D2 /* Network */,
 				8CA11BF4273A6A3000F56A99 /* Category */,
 				8CA11BFD273A6A3000F56A99 /* Configuration */,
 				8CA11C00273A6A3000F56A99 /* Navigation */,
@@ -263,6 +305,12 @@
 			children = (
 				8CA11C0F273A6B6200F56A99 /* Mine.h */,
 				8CA11C10273A6B6200F56A99 /* Mine.m */,
+				8C6FC83027420014003F5F09 /* User.h */,
+				8C6FC83127420014003F5F09 /* User.m */,
+				8C6FC833274200B8003F5F09 /* Configuration.h */,
+				8C6FC834274200B8003F5F09 /* Configuration.m */,
+				8C6FC836274200CF003F5F09 /* Preference.h */,
+				8C6FC837274200CF003F5F09 /* Preference.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,7 +472,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/R.objc/Robjc\" -p \"$SRCROOT/OCHub\" --skip-themes\n";
+			shellScript = "\"${PODS_ROOT}/R.objc/Robjc\" -p \"$SRCROOT/OCHub\"  --skip-themes\n";
 		};
 		9782D32F3FCC233625585F2C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -472,9 +520,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6FC83227420014003F5F09 /* User.m in Sources */,
 				8CA11C28273A6C1600F56A99 /* MineViewReactor.m in Sources */,
-				8C9EE3AB273A5D24005E6045 /* R.m in Sources */,
 				8CA11C22273A6BE600F56A99 /* MineViewController.m in Sources */,
+				8C6FC8272741FA5C003F5F09 /* R.m in Sources */,
 				8CA11C05273A6A3000F56A99 /* UIView+Addition.m in Sources */,
 				8CA11C06273A6A3000F56A99 /* OCFScrollViewController+Addition.m in Sources */,
 				8C283948273A57F40012A2F2 /* AppDelegate.m in Sources */,
@@ -482,18 +531,25 @@
 				8CA11C25273A6C0400F56A99 /* TrendingViewReactor.m in Sources */,
 				8C283959273A57F60012A2F2 /* main.m in Sources */,
 				8C373499273B90AF0098CCCB /* GeneralViewController.m in Sources */,
+				8C2104A027423A9300F486D2 /* OCFProvider+Network.m in Sources */,
+				8C21049D274239D200F486D2 /* OCHubSessionManager.m in Sources */,
 				8CF377A3273B5E3D00A6C347 /* TabBarReactor.m in Sources */,
+				8C21049A2742393100F486D2 /* BaseList.m in Sources */,
 				8CA11C04273A6A3000F56A99 /* OCFLibraryManager+Addition.m in Sources */,
 				8C373491273B6BE30098CCCB /* MineParallaxView.m in Sources */,
 				8C373496273B909A0098CCCB /* GeneralViewReactor.m in Sources */,
 				8CBD893A273D0554002E3F50 /* WebViewReactor.m in Sources */,
+				8C2104972742391A00F486D2 /* BaseResponse.m in Sources */,
 				8CA11C17273A6B8900F56A99 /* MineCell.m in Sources */,
 				8CA11C1C273A6BC800F56A99 /* MineItem.m in Sources */,
 				8CA11C08273A6A3000F56A99 /* NavigationController.m in Sources */,
+				8C6FC835274200B8003F5F09 /* Configuration.m in Sources */,
 				8CA11C11273A6B6200F56A99 /* Mine.m in Sources */,
 				8CBD893D273D0563002E3F50 /* WebViewController.m in Sources */,
+				8C6FC838274200CF003F5F09 /* Preference.m in Sources */,
 				8CF377A6273B5E5500A6C347 /* TabBarController.m in Sources */,
 				8C7FD4BF273D0931002FDE4E /* UIApplication+Addition.m in Sources */,
+				8C2104A327423BCC00F486D2 /* OCFProvider+OCHub.m in Sources */,
 				8CA11C03273A6A3000F56A99 /* OCFRouterManager+Addition.m in Sources */,
 				8CF377A9273B630F00A6C347 /* AppDependency.m in Sources */,
 				8CA11C07273A6A3000F56A99 /* QMUIConfigurationTemplate.m in Sources */,

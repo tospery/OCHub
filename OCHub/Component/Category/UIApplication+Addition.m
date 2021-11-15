@@ -11,8 +11,13 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        ExchangeImplementations(self.class, @selector(ocf_baseApiUrlString), @selector(my_ocf_baseApiUrlString));
         ExchangeImplementations(self.class, @selector(ocf_baseWebUrlString), @selector(my_ocf_baseWebUrlString));
     });
+}
+
+- (NSString *)my_ocf_baseApiUrlString {
+    return @"https://api.github.com";
 }
 
 - (NSString *)my_ocf_baseWebUrlString {
