@@ -6,7 +6,9 @@
 //
 
 #import <OCFrame/OCFrame.h>
+#import "MineParallaxReactor.h"
 
 @interface MineViewReactor : OCFCollectionViewReactor
+@property (nonatomic, strong, readonly) MineParallaxReactor *parallaxReactor;
 
 @end

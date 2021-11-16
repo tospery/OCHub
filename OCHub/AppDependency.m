@@ -22,6 +22,7 @@
 - (void)entryDidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ThemeManager setThemeWithJsonInMainBundle:@"theme_default"];
     [super entryDidFinishLaunchingWithOptions:launchOptions];
+    [self updateConfiguration];
 }
 
 - (void)leaveDidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -31,14 +32,29 @@
 
 - (void)test:(NSDictionary *)launchOptions {
     OCFLogDebug(kOCFLogTagTest, @"测试开始");
-    [[self.provider configurationSignal] subscribeNext:^(id x) {
-        NSLog(@"成功");
-        } error:^(NSError * error) {
-            NSLog(@"失败");
-        } completed:^{
-            NSLog(@"完成");
-        }];
+//    [[self.provider configurationSignal] subscribeNext:^(id x) {
+//        NSLog(@"成功");
+//        } error:^(NSError * error) {
+//            NSLog(@"失败");
+//        } completed:^{
+//            NSLog(@"完成");
+//        }];
     OCFLogDebug(kOCFLogTagTest, @"测试结束");
+}
+
+- (void)updateConfiguration {
+    __block Configuration *configuration = Configuration.current;
+    configuration.hasUpdated = NO;
+    [configuration save];
+    [[[self.provider configurationSignal] timeout:5 onScheduler:[RACScheduler scheduler]] subscribeNext:^(Configuration *new) {
+        ;
+        configuration = new;
+        configuration.hasUpdated = YES;
+        [configuration save];
+    } error:^(NSError *error) {
+        configuration.hasUpdated = YES;
+        [configuration save];
+    }];
 }
 
 @end

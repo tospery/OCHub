@@ -1,6 +1,5 @@
-User/Prefrence/Configuration
-Trending/Center
 LaunchScreen
 RouterManager
 GeneragerView
 Network/Web/Statistics/Manager
+Login

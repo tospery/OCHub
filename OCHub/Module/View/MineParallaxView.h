@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MineParallaxView : UIImageView
+@interface MineParallaxView : UIImageView <OCFReactive>
 
 @end
 

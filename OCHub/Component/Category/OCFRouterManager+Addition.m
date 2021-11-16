@@ -22,7 +22,7 @@
     [JLRoutes.globalRoutes addRoute:kPatternAbout handler:[JLRRouteHandler handlerBlockForTargetClass:GeneralViewReactor.class completion:^BOOL(GeneralViewReactor *reactor) {
         return [navigator pushReactor:reactor animated:YES] != nil;
     }]];
-    [JLRoutes.globalRoutes addRoute:kOCFPatternWeb handler:[JLRRouteHandler handlerBlockForTargetClass:WebViewReactor.class completion:^BOOL(WebViewReactor *reactor) {
+    [JLRoutes.globalRoutes addRoute:kOCFPatternAny handler:[JLRRouteHandler handlerBlockForTargetClass:WebViewReactor.class completion:^BOOL(WebViewReactor *reactor) {
         NSString *scheme = reactor.url.scheme;
         if (![scheme isEqualToString:@"http"] && ![scheme isEqualToString:@"https"]) {
             return NO;

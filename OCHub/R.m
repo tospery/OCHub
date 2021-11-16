@@ -45,6 +45,7 @@
 @property (nonatomic, strong) UIImage* appSlogan;
 @property (nonatomic, strong) UIImage* icPortalAbout;
 @property (nonatomic, strong) UIImage* appLogo;
+@property (nonatomic, strong) UIImage* icUserAvatar;
 @property (nonatomic, strong) UIImage* icTabbarTrending;
 @property (nonatomic, strong) UIImage* icTabbarMine;
 @property (nonatomic, strong) UIImage* icPortalWebsite;
@@ -54,6 +55,7 @@
 - (UIImage*)appSlogan { return [UIImage imageNamed:@"AppSlogan" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)icPortalAbout { return [UIImage imageNamed:@"ic_portal_about" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)appLogo { return [UIImage imageNamed:@"AppLogo" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
+- (UIImage*)icUserAvatar { return [UIImage imageNamed:@"ic_user_avatar" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)icTabbarTrending { return [UIImage imageNamed:@"ic_tabbar_trending" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)icTabbarMine { return [UIImage imageNamed:@"ic_tabbar_mine" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }
 - (UIImage*)icPortalWebsite { return [UIImage imageNamed:@"ic_portal_website" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil]; }

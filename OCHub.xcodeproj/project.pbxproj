@@ -20,6 +20,9 @@
 		8C373491273B6BE30098CCCB /* MineParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373490273B6BE30098CCCB /* MineParallaxView.m */; };
 		8C373496273B909A0098CCCB /* GeneralViewReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373495273B909A0098CCCB /* GeneralViewReactor.m */; };
 		8C373499273B90AF0098CCCB /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C373498273B90AF0098CCCB /* GeneralViewController.m */; };
+		8C59793E274384A1002DAFB2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C59793D274384A1002DAFB2 /* LoginViewController.m */; };
+		8C597941274384B6002DAFB2 /* LoginViewReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C597940274384B6002DAFB2 /* LoginViewReactor.m */; };
+		8C59794527438BCD002DAFB2 /* MineParallaxReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C59794427438BCC002DAFB2 /* MineParallaxReactor.m */; };
 		8C6FC8272741FA5C003F5F09 /* R.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC8252741FA5C003F5F09 /* R.m */; };
 		8C6FC83227420014003F5F09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC83127420014003F5F09 /* User.m */; };
 		8C6FC835274200B8003F5F09 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC834274200B8003F5F09 /* Configuration.m */; };
@@ -74,6 +77,12 @@
 		8C373495273B909A0098CCCB /* GeneralViewReactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralViewReactor.m; sourceTree = "<group>"; };
 		8C373497273B90AF0098CCCB /* GeneralViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralViewController.h; sourceTree = "<group>"; };
 		8C373498273B90AF0098CCCB /* GeneralViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralViewController.m; sourceTree = "<group>"; };
+		8C59793C274384A1002DAFB2 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8C59793D274384A1002DAFB2 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8C59793F274384B6002DAFB2 /* LoginViewReactor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewReactor.h; sourceTree = "<group>"; };
+		8C597940274384B6002DAFB2 /* LoginViewReactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewReactor.m; sourceTree = "<group>"; };
+		8C59794327438BCC002DAFB2 /* MineParallaxReactor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineParallaxReactor.h; sourceTree = "<group>"; };
+		8C59794427438BCC002DAFB2 /* MineParallaxReactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineParallaxReactor.m; sourceTree = "<group>"; };
 		8C6FC8252741FA5C003F5F09 /* R.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R.m; sourceTree = "<group>"; };
 		8C6FC8262741FA5C003F5F09 /* R.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R.h; sourceTree = "<group>"; };
 		8C6FC83027420014003F5F09 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -337,6 +346,10 @@
 				8C373495273B909A0098CCCB /* GeneralViewReactor.m */,
 				8CBD8938273D0554002E3F50 /* WebViewReactor.h */,
 				8CBD8939273D0554002E3F50 /* WebViewReactor.m */,
+				8C59793F274384B6002DAFB2 /* LoginViewReactor.h */,
+				8C597940274384B6002DAFB2 /* LoginViewReactor.m */,
+				8C59794327438BCC002DAFB2 /* MineParallaxReactor.h */,
+				8C59794427438BCC002DAFB2 /* MineParallaxReactor.m */,
 			);
 			path = Reactor;
 			sourceTree = "<group>";
@@ -354,6 +367,8 @@
 				8C373498273B90AF0098CCCB /* GeneralViewController.m */,
 				8CBD893B273D0563002E3F50 /* WebViewController.h */,
 				8CBD893C273D0563002E3F50 /* WebViewController.m */,
+				8C59793C274384A1002DAFB2 /* LoginViewController.h */,
+				8C59793D274384A1002DAFB2 /* LoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -530,6 +545,7 @@
 				8CA11C1F273A6BD900F56A99 /* TrendingViewController.m in Sources */,
 				8CA11C25273A6C0400F56A99 /* TrendingViewReactor.m in Sources */,
 				8C283959273A57F60012A2F2 /* main.m in Sources */,
+				8C59794527438BCD002DAFB2 /* MineParallaxReactor.m in Sources */,
 				8C373499273B90AF0098CCCB /* GeneralViewController.m in Sources */,
 				8C2104A027423A9300F486D2 /* OCFProvider+Network.m in Sources */,
 				8C21049D274239D200F486D2 /* OCHubSessionManager.m in Sources */,
@@ -539,11 +555,13 @@
 				8C373491273B6BE30098CCCB /* MineParallaxView.m in Sources */,
 				8C373496273B909A0098CCCB /* GeneralViewReactor.m in Sources */,
 				8CBD893A273D0554002E3F50 /* WebViewReactor.m in Sources */,
+				8C597941274384B6002DAFB2 /* LoginViewReactor.m in Sources */,
 				8C2104972742391A00F486D2 /* BaseResponse.m in Sources */,
 				8CA11C17273A6B8900F56A99 /* MineCell.m in Sources */,
 				8CA11C1C273A6BC800F56A99 /* MineItem.m in Sources */,
 				8CA11C08273A6A3000F56A99 /* NavigationController.m in Sources */,
 				8C6FC835274200B8003F5F09 /* Configuration.m in Sources */,
+				8C59793E274384A1002DAFB2 /* LoginViewController.m in Sources */,
 				8CA11C11273A6B6200F56A99 /* Mine.m in Sources */,
 				8CBD893D273D0563002E3F50 /* WebViewController.m in Sources */,
 				8C6FC838274200CF003F5F09 /* Preference.m in Sources */,

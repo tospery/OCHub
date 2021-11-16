@@ -50,4 +50,13 @@
     return _parallaxView;
 }
 
+#pragma mark - Public
+- (void)bind:(MineViewReactor *)reactor {
+    [super bind:reactor];
+    [self.parallaxView bind:self.reactor.parallaxReactor];
+    [reactor.parallaxReactor.userCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
+        OCFLogDebug(kOCFLogTagNormal, @"点击了%@", x);
+    }];
+}
+
 @end

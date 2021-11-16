@@ -7,6 +7,11 @@
 
 #import "BaseResponse.h"
 
+@interface BaseResponse ()
+
+@end
+
 @implementation BaseResponse
 
 @end
+
