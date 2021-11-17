@@ -14,6 +14,10 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - ARAnalytics-JX/CoreIOS (5.0.1-v2)
+  - ARAnalytics-JX/UMengAnalytics (5.0.1-v2):
+    - ARAnalytics-JX/CoreIOS
+    - UMCommon
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -120,8 +124,12 @@ PODS:
   - Toast (4.0.0)
   - TYAlertController (1.2.0)
   - UICKeyChainStore (2.1.2)
+  - UMCommon (7.3.5):
+    - UMDevice
+  - UMDevice (2.0.5)
 
 DEPENDENCIES:
+  - ARAnalytics-JX/UMengAnalytics (from `../ARAnalytics-JX`)
   - BlocksKit (= 2.2.5)
   - FontAwesomeKit (= 2.2.1)
   - IQKeyboardManager (= 6.5.6)
@@ -162,13 +170,18 @@ SPEC REPOS:
     - Toast
     - TYAlertController
     - UICKeyChainStore
+    - UMCommon
+    - UMDevice
 
 EXTERNAL SOURCES:
+  ARAnalytics-JX:
+    :path: "../ARAnalytics-JX"
   OCFrame:
     :path: "../OCFrame"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  ARAnalytics-JX: 808cc72015323f87d9a1a6b7f7e00ab6dbbdfbd4
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -196,7 +209,9 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
+  UMCommon: ab4d875ddefe1b06c60b577e4a58bc4d433ee067
+  UMDevice: c13bbb2e8ca6c67d1e23e03162553e3ec5a8b5b0
 
-PODFILE CHECKSUM: f0893a7f09d52f7382ca72e439e6cfea0863fa24
+PODFILE CHECKSUM: 252ade6ed8a58a598de2e24f2cd6e2ae1ec2b27a
 
 COCOAPODS: 1.11.2

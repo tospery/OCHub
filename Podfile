@@ -15,9 +15,10 @@ target "OCHub" do
 	pod 'LSAnimator', '2.1.5'
 	pod 'FontAwesomeKit', '2.2.1'
 	pod 'OHHTTPStubs', '9.1.0'
+	# pod "ARAnalytics-JX", :subspecs => ["UMengAnalytics"], :path => '../ARAnalytics-JX'
 	
 	# Other
-  pod 'MXParallaxHeader', '1.1.0'
+    pod 'MXParallaxHeader', '1.1.0'
 	
 	# pod 'MLeaksFinder', '1.0.0'
 	# pod 'pop', '1.0.12'
@@ -127,3 +128,4 @@ post_install do |installer|
         end
     end
 end
+

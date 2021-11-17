@@ -126,6 +126,7 @@
 		8CA11C24273A6C0400F56A99 /* TrendingViewReactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrendingViewReactor.m; sourceTree = "<group>"; };
 		8CA11C26273A6C1600F56A99 /* MineViewReactor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewReactor.h; sourceTree = "<group>"; };
 		8CA11C27273A6C1600F56A99 /* MineViewReactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewReactor.m; sourceTree = "<group>"; };
+		8CB025C32744D37100DC9459 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4/UMMobClick.framework; sourceTree = "<group>"; };
 		8CBD8938273D0554002E3F50 /* WebViewReactor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewReactor.h; sourceTree = "<group>"; };
 		8CBD8939273D0554002E3F50 /* WebViewReactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewReactor.m; sourceTree = "<group>"; };
 		8CBD893B273D0563002E3F50 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -394,6 +395,7 @@
 		EBE75F2482AF39BCB32F885C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CB025C32744D37100DC9459 /* UMMobClick.framework */,
 				4ED061F19B769E088A4EFFD5 /* Pods_OCHub.framework */,
 			);
 			name = Frameworks;
@@ -710,6 +712,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WDE622528T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OCHub/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -746,6 +752,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WDE622528T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OCHub/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
