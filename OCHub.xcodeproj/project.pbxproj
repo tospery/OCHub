@@ -27,6 +27,7 @@
 		8C6FC83227420014003F5F09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC83127420014003F5F09 /* User.m */; };
 		8C6FC835274200B8003F5F09 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC834274200B8003F5F09 /* Configuration.m */; };
 		8C6FC838274200CF003F5F09 /* Preference.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC837274200CF003F5F09 /* Preference.m */; };
+		8C7882D0274F889C00770A55 /* theme_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C7882CF274F889C00770A55 /* theme_default.plist */; };
 		8C7FD4BF273D0931002FDE4E /* UIApplication+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7FD4BE273D0931002FDE4E /* UIApplication+Addition.m */; };
 		8C9EE3A7273A5AD3005E6045 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C9EE3A6273A5AD3005E6045 /* Localizable.strings */; };
 		8CA11BEE273A69B000F56A99 /* theme_default.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA11BED273A69B000F56A99 /* theme_default.json */; };
@@ -91,6 +92,7 @@
 		8C6FC834274200B8003F5F09 /* Configuration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		8C6FC836274200CF003F5F09 /* Preference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Preference.h; sourceTree = "<group>"; };
 		8C6FC837274200CF003F5F09 /* Preference.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preference.m; sourceTree = "<group>"; };
+		8C7882CF274F889C00770A55 /* theme_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = theme_default.plist; sourceTree = "<group>"; };
 		8C7FD4BD273D0931002FDE4E /* UIApplication+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Addition.h"; sourceTree = "<group>"; };
 		8C7FD4BE273D0931002FDE4E /* UIApplication+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Addition.m"; sourceTree = "<group>"; };
 		8C9EE3A6273A5AD3005E6045 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		8CA11BEC273A699B00F56A99 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8C7882CF274F889C00770A55 /* theme_default.plist */,
 				8CA11BED273A69B000F56A99 /* theme_default.json */,
 				8CF377AA273B6A1A00A6C347 /* Mines.json */,
 			);
@@ -466,6 +469,7 @@
 				8CA11BEE273A69B000F56A99 /* theme_default.json in Resources */,
 				8C9EE3A7273A5AD3005E6045 /* Localizable.strings in Resources */,
 				8CF377AB273B6A1A00A6C347 /* Mines.json in Resources */,
+				8C7882D0274F889C00770A55 /* theme_default.plist in Resources */,
 				8C283953273A57F60012A2F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,7 +493,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/R.objc/Robjc\" -p \"$SRCROOT/OCHub\"  --skip-themes\n";
+			shellScript = "\"${PODS_ROOT}/R.objc/Robjc\" -p \"$SRCROOT/OCHub\"\n";
 		};
 		9782D32F3FCC233625585F2C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

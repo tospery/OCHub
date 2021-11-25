@@ -20,7 +20,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.userInteractionEnabled = YES;
-        self.theme_backgroundColor = ThemeColorPicker.primary;
+        // YJX_TODO self.theme_backgroundColor = ThemeColorPicker.primary;
         [self addSubview:self.userButton];
     }
     return self;

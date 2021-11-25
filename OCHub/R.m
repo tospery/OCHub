@@ -63,6 +63,197 @@
 
 
 
+@implementation RStyle
+- (void)applyTo:(nullable id)object { SDThemeManagerApplyStyle(self.identifier, object); }
+@end
+
+
+
+@implementation RConstants
+- (UIColor*)COLOR_BACKGROUND_BADGE { return SDThemeManagerValueForConstant(@"COLOR_BACKGROUND_BADGE"); }
+- (UIColor*)COLOR_BACKGROUND_COMMON { return SDThemeManagerValueForConstant(@"COLOR_BACKGROUND_COMMON"); }
+- (UIColor*)COLOR_BACKGROUND_CONTENT { return SDThemeManagerValueForConstant(@"COLOR_BACKGROUND_CONTENT"); }
+- (UIColor*)COLOR_BACKGROUND_TRANSLUCENT { return SDThemeManagerValueForConstant(@"COLOR_BACKGROUND_TRANSLUCENT"); }
+- (UIColor*)COLOR_BORDER_TEXTFIELD { return SDThemeManagerValueForConstant(@"COLOR_BORDER_TEXTFIELD"); }
+- (UIColor*)COLOR_BUTTON_BACKGROUND { return SDThemeManagerValueForConstant(@"COLOR_BUTTON_BACKGROUND"); }
+- (UIColor*)COLOR_BUTTON_BACKGROUND_SELECTED { return SDThemeManagerValueForConstant(@"COLOR_BUTTON_BACKGROUND_SELECTED"); }
+- (UIColor*)COLOR_CLEAR { return SDThemeManagerValueForConstant(@"COLOR_CLEAR"); }
+- (UIColor*)COLOR_ERROR { return SDThemeManagerValueForConstant(@"COLOR_ERROR"); }
+- (UIColor*)COLOR_HIDER_BACKGROUND { return SDThemeManagerValueForConstant(@"COLOR_HIDER_BACKGROUND"); }
+- (UIColor*)COLOR_LOGIN_BUTTON { return SDThemeManagerValueForConstant(@"COLOR_LOGIN_BUTTON"); }
+- (UIColor*)COLOR_OK { return SDThemeManagerValueForConstant(@"COLOR_OK"); }
+- (UIColor*)COLOR_TEXT_COMMON { return SDThemeManagerValueForConstant(@"COLOR_TEXT_COMMON"); }
+- (UIColor*)COLOR_WARNING { return SDThemeManagerValueForConstant(@"COLOR_WARNING"); }
+- (NSNumber*)DIMENSION_CORNER_RADIUS_COMMON { return SDThemeManagerValueForConstant(@"DIMENSION_CORNER_RADIUS_COMMON"); }
+- (NSNumber*)DIMENSION_FONT_COMMON { return SDThemeManagerValueForConstant(@"DIMENSION_FONT_COMMON"); }
+- (NSString*)FONT_BOLD { return SDThemeManagerValueForConstant(@"FONT_BOLD"); }
+- (UIFont*)FONT_CHART_SPOKE { return SDThemeManagerValueForConstant(@"FONT_CHART_SPOKE"); }
+- (UIFont*)FONT_CHART_SPOKE_DETAIL { return SDThemeManagerValueForConstant(@"FONT_CHART_SPOKE_DETAIL"); }
+- (UIFont*)FONT_GRAPHIC_OBJECT_DATA { return SDThemeManagerValueForConstant(@"FONT_GRAPHIC_OBJECT_DATA"); }
+- (UIFont*)FONT_GRAPHIC_OBJECT_DESCRIPTION { return SDThemeManagerValueForConstant(@"FONT_GRAPHIC_OBJECT_DESCRIPTION"); }
+- (UIFont*)FONT_GRAPHIC_OBJECT_HEADER_DESCRIPTION { return SDThemeManagerValueForConstant(@"FONT_GRAPHIC_OBJECT_HEADER_DESCRIPTION"); }
+- (UIFont*)FONT_GRAPHIC_OBJECT_HEADER_VALUE { return SDThemeManagerValueForConstant(@"FONT_GRAPHIC_OBJECT_HEADER_VALUE"); }
+- (NSString*)FONT_ITALIC { return SDThemeManagerValueForConstant(@"FONT_ITALIC"); }
+- (NSString*)FONT_REGULAR { return SDThemeManagerValueForConstant(@"FONT_REGULAR"); }
+@end
+
+
+@interface RStyles ()
+@property (nonatomic, strong) RStyle* commonBoldLabel;
+@property (nonatomic, strong) RStyle* commonBorderedView;
+@property (nonatomic, strong) RStyle* commonColoredButton;
+@property (nonatomic, strong) RStyle* commonColoredButtonSelected;
+@property (nonatomic, strong) RStyle* commonColoredInverseButton;
+@property (nonatomic, strong) RStyle* commonLabel;
+@property (nonatomic, strong) RStyle* commonTextField;
+@property (nonatomic, strong) RStyle* commonTextualButton;
+@property (nonatomic, strong) RStyle* commonViewController;
+@property (nonatomic, strong) RStyle* testViewController;
+@end
+
+@implementation RStyles
+
+- (RStyle*)commonBoldLabel
+{	
+	if (!_commonBoldLabel)
+	{
+		_commonBoldLabel = [RStyle new];
+		_commonBoldLabel.identifier = @"CommonBoldLabel";
+	}
+	return _commonBoldLabel;
+}
+
+
+- (RStyle*)commonBorderedView
+{	
+	if (!_commonBorderedView)
+	{
+		_commonBorderedView = [RStyle new];
+		_commonBorderedView.identifier = @"CommonBorderedView";
+	}
+	return _commonBorderedView;
+}
+
+
+- (RStyle*)commonColoredButton
+{	
+	if (!_commonColoredButton)
+	{
+		_commonColoredButton = [RStyle new];
+		_commonColoredButton.identifier = @"CommonColoredButton";
+	}
+	return _commonColoredButton;
+}
+
+
+- (RStyle*)commonColoredButtonSelected
+{	
+	if (!_commonColoredButtonSelected)
+	{
+		_commonColoredButtonSelected = [RStyle new];
+		_commonColoredButtonSelected.identifier = @"CommonColoredButtonSelected";
+	}
+	return _commonColoredButtonSelected;
+}
+
+
+- (RStyle*)commonColoredInverseButton
+{	
+	if (!_commonColoredInverseButton)
+	{
+		_commonColoredInverseButton = [RStyle new];
+		_commonColoredInverseButton.identifier = @"CommonColoredInverseButton";
+	}
+	return _commonColoredInverseButton;
+}
+
+
+- (RStyle*)commonLabel
+{	
+	if (!_commonLabel)
+	{
+		_commonLabel = [RStyle new];
+		_commonLabel.identifier = @"CommonLabel";
+	}
+	return _commonLabel;
+}
+
+
+- (RStyle*)commonTextField
+{	
+	if (!_commonTextField)
+	{
+		_commonTextField = [RStyle new];
+		_commonTextField.identifier = @"CommonTextField";
+	}
+	return _commonTextField;
+}
+
+
+- (RStyle*)commonTextualButton
+{	
+	if (!_commonTextualButton)
+	{
+		_commonTextualButton = [RStyle new];
+		_commonTextualButton.identifier = @"CommonTextualButton";
+	}
+	return _commonTextualButton;
+}
+
+
+- (RStyle*)commonViewController
+{	
+	if (!_commonViewController)
+	{
+		_commonViewController = [RStyle new];
+		_commonViewController.identifier = @"CommonViewController";
+	}
+	return _commonViewController;
+}
+
+
+- (RStyle*)testViewController
+{	
+	if (!_testViewController)
+	{
+		_testViewController = [RStyle new];
+		_testViewController.identifier = @"TestViewController";
+	}
+	return _testViewController;
+}
+
+@end
+
+
+@interface RThemes ()
+@property (nonatomic, strong) RConstants* constants;
+@property (nonatomic, strong) RStyles* styles;
+@end
+
+@implementation RThemes
+
+- (RConstants*)constants
+{
+	if (!_constants)
+	{
+		_constants = [RConstants new];
+	}
+	return _constants;
+}
+
+- (RStyles*)styles
+{
+	if (!_styles)
+	{
+		_styles = [RStyles new];
+	}
+	return _styles;
+}
+
+@end
+
+
+
 @implementation RLaunchScreen
 - (__kindof UIViewController*)instantiateInitialViewController { return [[UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil] instantiateInitialViewController]; }
 @end
@@ -101,6 +292,7 @@
 @interface R ()
 @property (nonatomic, strong) RStrings* string;
 @property (nonatomic, strong) RImages* image;
+@property (nonatomic, strong) RThemes* theme;
 @property (nonatomic, strong) RStoryboards* storyboard;
 @property (nonatomic, strong) RSegues* segue;
 @end
@@ -122,6 +314,7 @@
 
 + (RStrings*)string { return [[R sharedInstance] string]; }
 + (RImages*)image { return [[R sharedInstance] image]; }
++ (RThemes*)theme { return [[R sharedInstance] theme]; }
 + (RStoryboards*)storyboard { return [[R sharedInstance] storyboard]; }
 + (RSegues*)segue { return [[R sharedInstance] segue]; }
 
@@ -141,6 +334,15 @@
 		_image = [RImages new];
 	}
 	return _image;
+}
+
+- (RThemes*)theme
+{
+	if (!_theme)
+	{
+		_theme = [RThemes new];
+	}
+	return _theme;
 }
 
 - (RStoryboards*)storyboard
