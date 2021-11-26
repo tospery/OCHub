@@ -15,7 +15,7 @@ target "OCHub" do
 	pod 'LSAnimator', '2.1.5'
 	pod 'FontAwesomeKit', '2.2.1'
 	pod 'OHHTTPStubs', '9.1.0'
-	# pod "ARAnalytics-JX", :subspecs => ["UMengAnalytics"], :path => '../ARAnalytics-JX'
+	pod "ARAnalytics-JX", :subspecs => ["UMengAnalytics"], :git => 'https://github.com/tospery/ARAnalytics-JX.git'
 	
 	# Other
     pod 'MXParallaxHeader', '1.1.0'

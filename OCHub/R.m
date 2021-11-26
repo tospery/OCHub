@@ -70,20 +70,38 @@
 
 
 @implementation RConstants
+- (UIColor*)COLOR_BACKGROUND { return SDThemeManagerValueForConstant(@"COLOR_BACKGROUND"); }
 - (UIColor*)COLOR_BACKGROUND_BADGE { return SDThemeManagerValueForConstant(@"COLOR_BACKGROUND_BADGE"); }
 - (UIColor*)COLOR_BACKGROUND_COMMON { return SDThemeManagerValueForConstant(@"COLOR_BACKGROUND_COMMON"); }
 - (UIColor*)COLOR_BACKGROUND_CONTENT { return SDThemeManagerValueForConstant(@"COLOR_BACKGROUND_CONTENT"); }
 - (UIColor*)COLOR_BACKGROUND_TRANSLUCENT { return SDThemeManagerValueForConstant(@"COLOR_BACKGROUND_TRANSLUCENT"); }
+- (UIColor*)COLOR_BARTEXT { return SDThemeManagerValueForConstant(@"COLOR_BARTEXT"); }
+- (UIColor*)COLOR_BARTINT { return SDThemeManagerValueForConstant(@"COLOR_BARTINT"); }
+- (UIColor*)COLOR_BLACK { return SDThemeManagerValueForConstant(@"COLOR_BLACK"); }
+- (UIColor*)COLOR_BODY { return SDThemeManagerValueForConstant(@"COLOR_BODY"); }
+- (UIColor*)COLOR_BORDER { return SDThemeManagerValueForConstant(@"COLOR_BORDER"); }
 - (UIColor*)COLOR_BORDER_TEXTFIELD { return SDThemeManagerValueForConstant(@"COLOR_BORDER_TEXTFIELD"); }
+- (UIColor*)COLOR_BRIGHT { return SDThemeManagerValueForConstant(@"COLOR_BRIGHT"); }
 - (UIColor*)COLOR_BUTTON_BACKGROUND { return SDThemeManagerValueForConstant(@"COLOR_BUTTON_BACKGROUND"); }
 - (UIColor*)COLOR_BUTTON_BACKGROUND_SELECTED { return SDThemeManagerValueForConstant(@"COLOR_BUTTON_BACKGROUND_SELECTED"); }
 - (UIColor*)COLOR_CLEAR { return SDThemeManagerValueForConstant(@"COLOR_CLEAR"); }
+- (UIColor*)COLOR_DIM { return SDThemeManagerValueForConstant(@"COLOR_DIM"); }
 - (UIColor*)COLOR_ERROR { return SDThemeManagerValueForConstant(@"COLOR_ERROR"); }
+- (UIColor*)COLOR_FOOTER { return SDThemeManagerValueForConstant(@"COLOR_FOOTER"); }
+- (UIColor*)COLOR_FOREGROUND { return SDThemeManagerValueForConstant(@"COLOR_FOREGROUND"); }
+- (UIColor*)COLOR_HEADER { return SDThemeManagerValueForConstant(@"COLOR_HEADER"); }
 - (UIColor*)COLOR_HIDER_BACKGROUND { return SDThemeManagerValueForConstant(@"COLOR_HIDER_BACKGROUND"); }
+- (UIColor*)COLOR_INDICATOR { return SDThemeManagerValueForConstant(@"COLOR_INDICATOR"); }
 - (UIColor*)COLOR_LOGIN_BUTTON { return SDThemeManagerValueForConstant(@"COLOR_LOGIN_BUTTON"); }
 - (UIColor*)COLOR_OK { return SDThemeManagerValueForConstant(@"COLOR_OK"); }
+- (UIColor*)COLOR_PRIMARY { return SDThemeManagerValueForConstant(@"COLOR_PRIMARY"); }
+- (UIColor*)COLOR_SECONDARY { return SDThemeManagerValueForConstant(@"COLOR_SECONDARY"); }
+- (UIColor*)COLOR_SEPARATOR { return SDThemeManagerValueForConstant(@"COLOR_SEPARATOR"); }
+- (UIColor*)COLOR_SPECIAL { return SDThemeManagerValueForConstant(@"COLOR_SPECIAL"); }
 - (UIColor*)COLOR_TEXT_COMMON { return SDThemeManagerValueForConstant(@"COLOR_TEXT_COMMON"); }
+- (UIColor*)COLOR_TITLE { return SDThemeManagerValueForConstant(@"COLOR_TITLE"); }
 - (UIColor*)COLOR_WARNING { return SDThemeManagerValueForConstant(@"COLOR_WARNING"); }
+- (UIColor*)COLOR_WHITE { return SDThemeManagerValueForConstant(@"COLOR_WHITE"); }
 - (NSNumber*)DIMENSION_CORNER_RADIUS_COMMON { return SDThemeManagerValueForConstant(@"DIMENSION_CORNER_RADIUS_COMMON"); }
 - (NSNumber*)DIMENSION_FONT_COMMON { return SDThemeManagerValueForConstant(@"DIMENSION_FONT_COMMON"); }
 - (NSString*)FONT_BOLD { return SDThemeManagerValueForConstant(@"FONT_BOLD"); }
@@ -107,6 +125,7 @@
 @property (nonatomic, strong) RStyle* commonLabel;
 @property (nonatomic, strong) RStyle* commonTextField;
 @property (nonatomic, strong) RStyle* commonTextualButton;
+@property (nonatomic, strong) RStyle* commonView;
 @property (nonatomic, strong) RStyle* commonViewController;
 @property (nonatomic, strong) RStyle* testViewController;
 @end
@@ -198,6 +217,17 @@
 		_commonTextualButton.identifier = @"CommonTextualButton";
 	}
 	return _commonTextualButton;
+}
+
+
+- (RStyle*)commonView
+{	
+	if (!_commonView)
+	{
+		_commonView = [RStyle new];
+		_commonView.identifier = @"CommonView";
+	}
+	return _commonView;
 }
 
 

@@ -6,14 +6,44 @@
 	<integer>2</integer>
 	<key>Constants</key>
 	<dict>
-		<key>FONT_REGULAR</key>
-		<string>system</string>
-		<key>FONT_BOLD</key>
-		<string>systembold</string>
-		<key>FONT_ITALIC</key>
-		<string>systemitalic</string>
 		<key>COLOR_CLEAR</key>
 		<string>c:FFF0</string>
+		<key>COLOR_WHITE</key>
+		<string>c:FFF</string>
+		<key>COLOR_BLACK</key>
+		<string>c:000</string>
+		<key>COLOR_PRIMARY</key>
+		<string>c:0AD198</string>
+		<key>COLOR_SECONDARY</key>
+		<string>c:FFAB61</string>
+		<key>COLOR_SPECIAL</key>
+		<string>c:FFAB61</string>
+		<key>COLOR_BORDER</key>
+		<string>c:D2D2D2</string>
+		<key>COLOR_SEPARATOR</key>
+		<string>c:F2F2F2</string>
+		<key>COLOR_INDICATOR</key>
+		<string>c:757575</string>
+		<key>COLOR_BACKGROUND</key>
+		<string>c:F6F6F6</string>
+		<key>COLOR_FOREGROUND</key>
+		<string>c:212121</string>
+		<key>COLOR_BRIGHT</key>
+		<string>c:00000080</string>
+		<key>COLOR_DIM</key>
+		<string>c:FFFFFF80</string>
+		<key>COLOR_TITLE</key>
+		<string>c:333</string>
+		<key>COLOR_BODY</key>
+		<string>c:666</string>
+		<key>COLOR_HEADER</key>
+		<string>c:ABABAB</string>
+		<key>COLOR_FOOTER</key>
+		<string>c:999</string>
+		<key>COLOR_BARTINT</key>
+		<string>c:FFF</string>
+		<key>COLOR_BARTEXT</key>
+		<string>c:333</string>
 		<key>COLOR_TEXT_COMMON</key>
 		<string>c:4D4D4D</string>
 		<key>COLOR_BACKGROUND_COMMON</key>
@@ -44,6 +74,12 @@
 		<integer>8</integer>
 		<key>DIMENSION_FONT_COMMON</key>
 		<integer>16</integer>
+		<key>FONT_REGULAR</key>
+		<string>system</string>
+		<key>FONT_BOLD</key>
+		<string>systembold</string>
+		<key>FONT_ITALIC</key>
+		<string>systemitalic</string>
 		<key>FONT_CHART_SPOKE</key>
 		<string>f:FONT_BOLD,18</string>
 		<key>FONT_CHART_SPOKE_DETAIL</key>
@@ -62,6 +98,11 @@
 		<key>CommonViewController</key>
 		<dict>
 			<key>view.backgroundColor</key>
+			<string>COLOR_BACKGROUND_COMMON</string>
+		</dict>
+		<key>CommonView</key>
+		<dict>
+			<key>backgroundColor</key>
 			<string>COLOR_BACKGROUND_COMMON</string>
 		</dict>
 		<key>CommonBorderedView</key>

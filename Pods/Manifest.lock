@@ -14,6 +14,10 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - ARAnalytics-JX/UMengAnalytics (5.0.1-v1):
+    - ARAnalytics/CoreIOS
+    - UMCommon
+  - ARAnalytics/CoreIOS (5.0.1)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -122,8 +126,12 @@ PODS:
   - Toast (4.0.0)
   - TYAlertController (1.2.0)
   - UICKeyChainStore (2.1.2)
+  - UMCommon (7.3.5):
+    - UMDevice
+  - UMDevice (2.0.5)
 
 DEPENDENCIES:
+  - ARAnalytics-JX/UMengAnalytics (from `https://github.com/tospery/ARAnalytics-JX.git`)
   - BlocksKit (= 2.2.5)
   - FontAwesomeKit (= 2.2.1)
   - IQKeyboardManager (= 6.5.6)
@@ -138,6 +146,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - ARAnalytics
     - BlocksKit
     - CocoaLumberjack
     - DZNEmptyDataSet
@@ -164,13 +173,24 @@ SPEC REPOS:
     - Toast
     - TYAlertController
     - UICKeyChainStore
+    - UMCommon
+    - UMDevice
 
 EXTERNAL SOURCES:
+  ARAnalytics-JX:
+    :git: https://github.com/tospery/ARAnalytics-JX.git
   OCFrame:
     :path: "../OCFrame"
 
+CHECKOUT OPTIONS:
+  ARAnalytics-JX:
+    :commit: 09e1913b3fcea8f1da3ab9866a7e8ee5e31b28cc
+    :git: https://github.com/tospery/ARAnalytics-JX.git
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  ARAnalytics: 896e530551168721fbb8852e044b8afb9baffdde
+  ARAnalytics-JX: 48b13fbb04794e2234a67aeea7748f14b8e96990
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -198,7 +218,9 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
+  UMCommon: ab4d875ddefe1b06c60b577e4a58bc4d433ee067
+  UMDevice: c13bbb2e8ca6c67d1e23e03162553e3ec5a8b5b0
 
-PODFILE CHECKSUM: 2178ce7483bad4b6691771eca86608dd7d021a43
+PODFILE CHECKSUM: 633db824ebfc037771a4d5943d7e5d9782c05f29
 
 COCOAPODS: 1.11.2

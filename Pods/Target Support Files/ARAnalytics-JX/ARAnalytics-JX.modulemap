@@ -1,0 +1,6 @@
+framework module ARAnalytics_JX {
+  umbrella header "ARAnalytics-JX-umbrella.h"
+
+  export *
+  module * { export * }
+}

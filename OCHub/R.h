@@ -139,20 +139,38 @@ Undefined: "是"
 
 
 @interface RConstants: NSObject
+- (UIColor*)COLOR_BACKGROUND;
 - (UIColor*)COLOR_BACKGROUND_BADGE;
 - (UIColor*)COLOR_BACKGROUND_COMMON;
 - (UIColor*)COLOR_BACKGROUND_CONTENT;
 - (UIColor*)COLOR_BACKGROUND_TRANSLUCENT;
+- (UIColor*)COLOR_BARTEXT;
+- (UIColor*)COLOR_BARTINT;
+- (UIColor*)COLOR_BLACK;
+- (UIColor*)COLOR_BODY;
+- (UIColor*)COLOR_BORDER;
 - (UIColor*)COLOR_BORDER_TEXTFIELD;
+- (UIColor*)COLOR_BRIGHT;
 - (UIColor*)COLOR_BUTTON_BACKGROUND;
 - (UIColor*)COLOR_BUTTON_BACKGROUND_SELECTED;
 - (UIColor*)COLOR_CLEAR;
+- (UIColor*)COLOR_DIM;
 - (UIColor*)COLOR_ERROR;
+- (UIColor*)COLOR_FOOTER;
+- (UIColor*)COLOR_FOREGROUND;
+- (UIColor*)COLOR_HEADER;
 - (UIColor*)COLOR_HIDER_BACKGROUND;
+- (UIColor*)COLOR_INDICATOR;
 - (UIColor*)COLOR_LOGIN_BUTTON;
 - (UIColor*)COLOR_OK;
+- (UIColor*)COLOR_PRIMARY;
+- (UIColor*)COLOR_SECONDARY;
+- (UIColor*)COLOR_SEPARATOR;
+- (UIColor*)COLOR_SPECIAL;
 - (UIColor*)COLOR_TEXT_COMMON;
+- (UIColor*)COLOR_TITLE;
 - (UIColor*)COLOR_WARNING;
+- (UIColor*)COLOR_WHITE;
 - (NSNumber*)DIMENSION_CORNER_RADIUS_COMMON;
 - (NSNumber*)DIMENSION_FONT_COMMON;
 - (NSString*)FONT_BOLD;
@@ -176,6 +194,7 @@ Undefined: "是"
 - (RStyle*)commonLabel;
 - (RStyle*)commonTextField;
 - (RStyle*)commonTextualButton;
+- (RStyle*)commonView;
 - (RStyle*)commonViewController;
 - (RStyle*)testViewController;
 @end

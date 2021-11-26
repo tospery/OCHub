@@ -25,7 +25,6 @@
 #import "NSString+OCFrame.h"
 #import "NSURL+OCFrame.h"
 #import "NSValueTransformer+OCFrame.h"
-#import "ThemeColorPicker+OCFrame.h"
 #import "UIApplication+OCFrame.h"
 #import "UICollectionReusableView+OCFrame.h"
 #import "UICollectionView+OCFrame.h"

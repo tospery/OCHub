@@ -26,8 +26,8 @@
         return [[NavigationController alloc] initWithRootViewController:viewController];
     }].array;
     [OCFAppDependency.sharedInstance.navigator pushNavigationController:self.viewControllers.firstObject];
-    // YJX_TODO self.tabBar.theme_tintColor = ThemeColorPicker.primary;
-    // YJX_TODO self.tabBar.theme_unselectedItemTintColor = ThemeColorPicker.title;
+    self.tabBar.tintColor = UIColor.ocf_primary;
+    self.tabBar.unselectedItemTintColor = UIColor.ocf_title;
 }
 
 

@@ -20,7 +20,6 @@
 }
 
 - (void)entryDidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // YJX_TODO [ThemeManager setThemeWithJsonInMainBundle:@"theme_default"];
     [super entryDidFinishLaunchingWithOptions:launchOptions];
     [self updateConfiguration];
 }
