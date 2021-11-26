@@ -104,6 +104,8 @@
 - (UIColor*)COLOR_WHITE { return SDThemeManagerValueForConstant(@"COLOR_WHITE"); }
 - (NSNumber*)DIMENSION_CORNER_RADIUS_COMMON { return SDThemeManagerValueForConstant(@"DIMENSION_CORNER_RADIUS_COMMON"); }
 - (NSNumber*)DIMENSION_FONT_COMMON { return SDThemeManagerValueForConstant(@"DIMENSION_FONT_COMMON"); }
+- (NSNumber*)DIMENSION_MARGIN { return SDThemeManagerValueForConstant(@"DIMENSION_MARGIN"); }
+- (NSNumber*)DIMENSION_PADDING { return SDThemeManagerValueForConstant(@"DIMENSION_PADDING"); }
 - (NSString*)FONT_BOLD { return SDThemeManagerValueForConstant(@"FONT_BOLD"); }
 - (UIFont*)FONT_CHART_SPOKE { return SDThemeManagerValueForConstant(@"FONT_CHART_SPOKE"); }
 - (UIFont*)FONT_CHART_SPOKE_DETAIL { return SDThemeManagerValueForConstant(@"FONT_CHART_SPOKE_DETAIL"); }

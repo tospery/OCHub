@@ -31,13 +31,6 @@
 
 - (void)test:(NSDictionary *)launchOptions {
     OCFLogDebug(kOCFLogTagTest, @"测试开始");
-//    [[self.provider configurationSignal] subscribeNext:^(id x) {
-//        NSLog(@"成功");
-//        } error:^(NSError * error) {
-//            NSLog(@"失败");
-//        } completed:^{
-//            NSLog(@"完成");
-//        }];
     OCFLogDebug(kOCFLogTagTest, @"测试结束");
 }
 

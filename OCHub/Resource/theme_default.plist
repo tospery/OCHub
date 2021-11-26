@@ -74,6 +74,10 @@
 		<integer>8</integer>
 		<key>DIMENSION_FONT_COMMON</key>
 		<integer>16</integer>
+		<key>DIMENSION_MARGIN</key>
+		<integer>8</integer>
+		<key>DIMENSION_PADDING</key>
+		<integer>8</integer>
 		<key>FONT_REGULAR</key>
 		<string>system</string>
 		<key>FONT_BOLD</key>
