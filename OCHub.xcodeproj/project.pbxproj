@@ -30,7 +30,6 @@
 		8C7882D0274F889C00770A55 /* theme_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C7882CF274F889C00770A55 /* theme_default.plist */; };
 		8C7FD4BF273D0931002FDE4E /* UIApplication+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7FD4BE273D0931002FDE4E /* UIApplication+Addition.m */; };
 		8C9EE3A7273A5AD3005E6045 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C9EE3A6273A5AD3005E6045 /* Localizable.strings */; };
-		8CA11BEE273A69B000F56A99 /* theme_default.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA11BED273A69B000F56A99 /* theme_default.json */; };
 		8CA11C03273A6A3000F56A99 /* OCFRouterManager+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA11BF5273A6A3000F56A99 /* OCFRouterManager+Addition.m */; };
 		8CA11C04273A6A3000F56A99 /* OCFLibraryManager+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA11BF6273A6A3000F56A99 /* OCFLibraryManager+Addition.m */; };
 		8CA11C05273A6A3000F56A99 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA11BF7273A6A3000F56A99 /* UIView+Addition.m */; };
@@ -98,7 +97,6 @@
 		8C9EE3A6273A5AD3005E6045 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8C9EE3AC273A5D91005E6045 /* OCHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OCHub.entitlements; sourceTree = "<group>"; };
 		8C9EE3AD273A5ECB005E6045 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		8CA11BED273A69B000F56A99 /* theme_default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = theme_default.json; sourceTree = "<group>"; };
 		8CA11BF1273A69EB00F56A99 /* Type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
 		8CA11BF2273A6A0600F56A99 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		8CA11BF3273A6A1300F56A99 /* Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Function.h; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				8C7882CF274F889C00770A55 /* theme_default.plist */,
-				8CA11BED273A69B000F56A99 /* theme_default.json */,
 				8CF377AA273B6A1A00A6C347 /* Mines.json */,
 			);
 			path = Resource;
@@ -466,7 +463,6 @@
 			files = (
 				8CF377A0273B5BD100A6C347 /* readme.txt in Resources */,
 				8C283956273A57F60012A2F2 /* LaunchScreen.storyboard in Resources */,
-				8CA11BEE273A69B000F56A99 /* theme_default.json in Resources */,
 				8C9EE3A7273A5AD3005E6045 /* Localizable.strings in Resources */,
 				8CF377AB273B6A1A00A6C347 /* Mines.json in Resources */,
 				8C7882D0274F889C00770A55 /* theme_default.plist in Resources */,
